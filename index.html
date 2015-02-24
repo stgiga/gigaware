@@ -51,6 +51,8 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
 <script type="text/javascript">
 
+var offset = 0;
+
 if (window.FileReader) {
 
     addEventHandler(window, 'load', function () {
@@ -147,8 +149,14 @@ if (window.FileReader) {
                         qr.makeCode(server.value + btoa(contents));
                         status.className = 'good text-center';
                         status.innerHTML = "Scan the QR code(s) to begin injecting!";
-                        $("#drop").append("<h4 class='good text-center'>"+fileName+"</h4>");
-                        $("#drop").append(newElm);
+
+                        var side = "right";
+                        if(offset % 2 == 0){
+                            side = "left";
+                        }
+                        $("#drop-"+side).append("<h4 class='good' style='overflow:hidden;white-space:nowrap;'>"+fileName+"</h4>");
+                        $("#drop-"+side).append(newElm);
+                        offset++;
                     } catch(e) {
                         status.className = 'error text-center';
                         status.innerHTML = "Error generating QR code (too big?)";
@@ -369,7 +377,7 @@ function checkPkx(str) {
     </div>
     <div class="container">
         <div class="row">
-            <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+            <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
             <h3>Instructions:</h3>
             <p>Follow these steps and you'll have all the Pokemon you need in no time!</p>
             <br>
@@ -402,9 +410,11 @@ function checkPkx(str) {
             </p>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h4 id="status" class="text-center" style="margin-top:25px">Your QR code(s) will generate here!</h4>
-                <div id="drop"></div>
+                <div id="drop-left" class="col-sm-6"></div>
+                <div id="drop-right" class="col-sm-6"></div>
+
                 <h4 id="filename" class="text-center"></h4>
 
             </div>
