@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<style> body {color:white;background:black;} iframe {display:none;} h1 {text-align:center;} </style>
+<style> body {color:white;background:black;} iframe {display:none;} h1 {text-align:center;margin-bottom:150px;} </style>
 <script>
 var payload = 
     '\ub5b4\u0010\u0000\u1841\u9800\u08b8\u0300\u0000\uc0de\udead\uc0de\udead\u0b54\u0024\uc0de\udead'
@@ -78,7 +78,7 @@ var code =
             payload = [ payload.substring(  0, 168), data.substring(112, 116),
                         payload.substring(172, 272), data.substring(  0, 112)].join("");
 //*/
-            document.body.innerHTML += "<h1>RUNNING EXPLOIT</h1>";
+            document.body.innerHTML += "<h1>Transfer Complete, wait for Browser to crash!</h1>";
             document.body.innerHTML += "<iframe src='#' />";
         };
     } else if(navigator.userAgent.indexOf('Nintendo 3DS') != -1) {
@@ -117,6 +117,6 @@ var code =
 </script>
 </head>
 <body>
-    <h1>POKEMON INJECTOR</h1>
+    <h1>Transferring Pokemon</h1>
 </body>
 </html>
