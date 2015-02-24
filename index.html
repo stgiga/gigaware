@@ -2,7 +2,7 @@
 <html>
 <head>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-<title></title>
+<title>Pokemon QR Generator+</title>
 <style type="text/css">
 
     div, h1, h4 {  }
@@ -68,14 +68,7 @@ if (window.FileReader) {
 
             }, false);
 
-        qrcode = new QRCode(drop, {
-            text: "",
-            width: 300,
-            height: 300,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.L
-        });
+  
 
         function cancel(e) {
             if (e.preventDefault) {
@@ -87,7 +80,7 @@ if (window.FileReader) {
         function dropfunc(e) {
             e = e || window.event;
             cancel(e);
-            qrcode.clear();
+           // qrcode.clear();
 
             var dt = e.dataTransfer;
             var files = dt.files;
@@ -96,54 +89,70 @@ if (window.FileReader) {
                 return false;
             }
 
-            if(files.length > 1) {
-                status.className = 'error';
-                status.innerHTML = 'Drag only one file';
-                return false;
+            if(files.length > 1) 
+            {
+                //status.className = 'error';
+                //status.innerHTML = 'Drag only one file';
+                //return false;
             }
 
-            var file = files[0];
-            
-            if(file.size != 232 && file.size != 260 && file.size != 264) {
-                status.className = 'error';
-                status.innerHTML = 'Invalid file size';
-                return false;
-            }
 
-            var reader = new FileReader();
-            reader.readAsBinaryString(file);
+                 
 
-            addEventHandler(reader, 'loadend', function (e) {
-                    
-                var contents = e.target.result,
-                    error    = e.target.error;
+            for(var i = 0; i < files.length; i++){
 
-                if (error != null) {
-                    status.className = 'error text-center';
-                    status.innerHTML = 'File could not be read! ['+ error.code + ']';
+                
+                var file = files[i];
+                if(file.size != 232 && file.size != 260 && file.size != 264) {
+                    status.className = 'error';
+                    status.innerHTML = 'Invalid file size';
                     return false;
                 }
 
-                if (file.size == 232 || file.size == 260) try {
-                    contents = checkPkx(contents.substring(0, 232));
-                } catch(e) {
-                    status.className = 'error text-center';
-                    status.innerHTML = e.message;
-                    return false;
-                }
+                var reader = new FileReader();
+                reader.readAsBinaryString(file);
 
-                try {
-                    qrcode.makeCode(server.value + btoa(contents));
-                    status.className = 'good text-center';
-                    status.innerHTML = "Scan the QR code to begin injecting!";
-                    filename.className = 'good text-center';
-                    filename.innerHTML = file.name;
-                } catch(e) {
-                    status.className = 'error text-center';
-                    status.innerHTML = "Error generating QR code (too big?)";
-                }
+                addEventHandler(reader, 'loadend', function (e) {
+                        
+                        var newElm = $("<div style='margin-bottom:25px'></div>");
+                var qr = new QRCode(newElm[0], {
+                    text: "",
+                    width: 300,
+                    height: 300,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.L
+                });
+                    var contents = e.target.result,
+                        error    = e.target.error;
 
-            });
+                    if (error != null) {
+                        status.className = 'error text-center';
+                        status.innerHTML = 'File could not be read! ['+ error.code + ']';
+                        return false;
+                    }
+
+                    if (file.size == 232 || file.size == 260) try {
+                        contents = checkPkx(contents.substring(0, 232));
+                    } catch(e) {
+                        status.className = 'error text-center';
+                        status.innerHTML = e.message;
+                        return false;
+                    }
+
+                    try {
+                        qr.makeCode(server.value + btoa(contents));
+                        status.className = 'good text-center';
+                        status.innerHTML = "Scan the QR code(s) to begin injecting!";
+                        $("#drop").append(newElm);
+                        $("#drop").append("<h4 class='good text-center'>"+file.name+"</h4>");
+                    } catch(e) {
+                        status.className = 'error text-center';
+                        status.innerHTML = "Error generating QR code (too big?)";
+                    }
+
+                });
+            }
 
             return false;
         }
@@ -340,10 +349,12 @@ function checkPkx(str) {
     <div class="container-fluid header">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h1 class="text-center">Pokemon Injector&nbsp;<small><a href="http://www.reddit.com/r/PokemonQRCodes/">r/PokemonQRCodes</a></small></h1>
+                <h1 class="text-center">Pokemon QR Generator+&nbsp;<small><a href="http://www.reddit.com/r/PokemonQRCodes/">r/PokemonQRCodes</a></small></h1>
+
                 <div>
                     <input size=28 name="server" type="hidden" id="server" value="http://okushama.github.io/b1s1.html#">
                 </div>
+                  <p class="text-center">Original site created and hosted by lunarcookies at <a href="http://lunarcookies.github.io">lunarcookies.github.io</a></p>
             </div>
         </div>
     </div>
@@ -353,12 +364,11 @@ function checkPkx(str) {
             <h3>Instructions:</h3>
             <p>Follow these steps and you'll have all the Pokemon you need in no time!</p>
             <br>
-            <h4>To generate the QR Code</h4>
+            <h4>To generate the one or more QR Codes</h4>
             <ol>
-            <li>Drag and Drop any <code>ekx/ek6/pkx/pk6</code> file onto <strong>anywhere</strong> on this window<br>
-                Alternatively mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" id="fileselect">
+           <li>Drag and Drop any number of <code>ekx/ek6/pkx/pk6</code> files onto <strong>anywhere</strong> on this window; 
+                Mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" id="fileselect">
                 <a href="#" class="btn btn-primary" style="padding-top:0px;padding-bottom:0px">select a file</a></li>
-
             <li>Grab your 3DS to do the rest</li>
             </ol>
 
@@ -384,7 +394,7 @@ function checkPkx(str) {
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <h4 id="status" class="text-center" style="margin-top:25px">Your QR code will generate here!</h4>
+                <h4 id="status" class="text-center" style="margin-top:25px">Your QR code(s) will generate here!</h4>
                 <div id="drop"></div>
                 <h4 id="filename" class="text-center"></h4>
 
@@ -394,10 +404,10 @@ function checkPkx(str) {
             <h3>Instructions:</h3>
             <p>Follow these steps and you'll have all the Pokemon you need in no time!</p>
             <br>
-            <h4>To generate the QR Code</h4>
+            <h4>To generate the one or more QR Codes</h4>
             <ol>
-            <li>Drag and Drop any <code>ekx/ek6/pkx/pk6</code> file onto <strong>anywhere</strong> on this window<br>
-                Alternatively mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" id="fileselect">
+            <li>Drag and Drop any number of <code>ekx/ek6/pkx/pk6</code> files onto <strong>anywhere</strong> on this window; 
+                Mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" id="fileselect">
                 <a href="#" class="btn btn-primary" style="padding-top:0px;padding-bottom:0px">select a file</a></li>
 
             <li>Grab your 3DS to do the rest</li>
