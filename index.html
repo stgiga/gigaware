@@ -115,7 +115,7 @@ if (window.FileReader) {
                     return function(e){
                    //     console.log(fileName);
 
-                        var newElm = $("<div style='margin-bottom:25px'></div>");
+                        var newElm = $("<div style='margin-bottom:35px'></div>");
                 var qr = new QRCode(newElm[0], {
                     text: "",
                     width: 300,
@@ -147,8 +147,8 @@ if (window.FileReader) {
                         qr.makeCode(server.value + btoa(contents));
                         status.className = 'good text-center';
                         status.innerHTML = "Scan the QR code(s) to begin injecting!";
-                        $("#drop").append(newElm);
                         $("#drop").append("<h4 class='good text-center'>"+fileName+"</h4>");
+                        $("#drop").append(newElm);
                     } catch(e) {
                         status.className = 'error text-center';
                         status.innerHTML = "Error generating QR code (too big?)";
