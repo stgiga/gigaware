@@ -53,6 +53,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
 var offset = 0;
 
+
 if (window.FileReader) {
 
     addEventHandler(window, 'load', function () {
@@ -61,15 +62,14 @@ if (window.FileReader) {
         var server = document.getElementById('server');
         var filename = document.getElementById('filename');
 
-        var control = document.getElementById("fileselect");
-            control.addEventListener("change", function(event) {
 
+         $(".fileselect").change(function(event) {
+            console.info("CHANGE");
                 // When the control has changed, there are new files
 
                sffunc(event);
 
-            }, false);
-
+            });
   
 
         function cancel(e) {
@@ -174,10 +174,10 @@ if (window.FileReader) {
             return false;
         }
 
-        function sffunc(e) {
+       function sffunc(e) {
             e = e || window.event;
             cancel(e);
-            qrcode.clear();
+           // qrcode.clear();
 
             var dt = e.target;
             var files = dt.files;
@@ -186,54 +186,85 @@ if (window.FileReader) {
                 return false;
             }
 
-            if(files.length > 1) {
-                status.className = 'error';
-                status.innerHTML = 'Drag only one file';
-                return false;
+            if(files.length > 1) 
+            {
+                //status.className = 'error';
+                //status.innerHTML = 'Drag only one file';
+                //return false;
             }
 
-            var file = files[0];
-            
-            if(file.size != 232 && file.size != 260 && file.size != 264) {
-                status.className = 'error';
-                status.innerHTML = 'Invalid file size';
-                return false;
-            }
 
-            var reader = new FileReader();
-            reader.readAsBinaryString(file);
+                 
 
-            addEventHandler(reader, 'loadend', function (e) {
-                    
-                var contents = e.target.result,
-                    error    = e.target.error;
+            for(var i = 0; i < files.length; i++){
 
-                if (error != null) {
-                    status.className = 'error text-center';
-                    status.innerHTML = 'File could not be read! ['+ error.code + ']';
+                
+                var file = files[i];
+                if(file.size != 232 && file.size != 260 && file.size != 264) {
+                    status.className = 'error';
+                    status.innerHTML = 'Invalid file size';
                     return false;
                 }
 
-                if (file.size == 232 || file.size == 260) try {
-                    contents = checkPkx(contents.substring(0, 232));
-                } catch(e) {
-                    status.className = 'error text-center';
-                    status.innerHTML = e.message;
-                    return false;
-                }
+                var reader = new FileReader();
+                reader.onload = (function(theFile){
+                    var fileName = theFile.name;
+                    return function(e){
+                   //     console.log(fileName);
 
-                try {
-                    qrcode.makeCode(server.value + btoa(contents));
-                    status.className = 'good text-center';
-                    status.innerHTML = "Scan the QR code to begin injecting!";
-                    filename.className = 'good text-center';
-                    filename.innerHTML = file.name;
-                } catch(e) {
-                    status.className = 'error text-center';
-                    status.innerHTML = "Error generating QR code (too big?)";
-                }
+                        var newElm = $("<div style='margin-bottom:35px'></div>");
+                var qr = new QRCode(newElm[0], {
+                    text: "",
+                    width: 300,
+                    height: 300,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.L
+                });
+                    var contents = e.target.result,
+                        error    = e.target.error;
 
-            });
+                       // console.info(e);
+
+                    if (error != null) {
+                        status.className = 'error text-center';
+                        status.innerHTML = 'File could not be read! ['+ error.code + ']';
+                        return false;
+                    }
+
+                    if (file.size == 232 || file.size == 260) try {
+                        contents = checkPkx(contents.substring(0, 232));
+                    } catch(e) {
+                        status.className = 'error text-center';
+                        status.innerHTML = e.message;
+                        return false;
+                    }
+
+                    try {
+                        qr.makeCode(server.value + btoa(contents));
+                        status.className = 'good text-center';
+                        status.innerHTML = "Scan the QR code(s) to begin injecting!";
+
+                        var side = "right";
+                        if(offset % 2 == 0){
+                            side = "left";
+                        }
+                        $("#drop-"+side).append("<h4 class='good' style='overflow:hidden;white-space:nowrap;'>"+fileName+"</h4>");
+                        $("#drop-"+side).append(newElm);
+                        offset++;
+                    } catch(e) {
+                        status.className = 'error text-center';
+                        status.innerHTML = "Error generating QR code (too big?)";
+                    }
+
+                    };
+                })(file);   
+                reader.readAsBinaryString(file);
+
+                addEventHandler(reader, 'loadend', function (e) {
+                
+                });
+            }
 
             return false;
         }
@@ -384,7 +415,7 @@ function checkPkx(str) {
             <h4>To generate the one or more QR Codes</h4>
             <ol>
            <li>Drag and Drop any number of <code>ekx/ek6/pkx/pk6</code> files onto <strong>anywhere</strong> on this window; 
-                Mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" id="fileselect">
+                Mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" class="fileselect" multiple>
                 <a href="#" class="btn btn-primary" style="padding-top:0px;padding-bottom:0px">select a file</a></li>
             <li>Grab your 3DS to do the rest</li>
             </ol>
@@ -426,7 +457,7 @@ function checkPkx(str) {
             <h4>To generate the one or more QR Codes</h4>
             <ol>
             <li>Drag and Drop any number of <code>ekx/ek6/pkx/pk6</code> files onto <strong>anywhere</strong> on this window; 
-                Mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" id="fileselect">
+                Mobile users can <input type="file" style="display:inline;opacity:0;z-index:9999;margin-right:-100px;width:100px;" class="fileselect" multiple>
                 <a href="#" class="btn btn-primary" style="padding-top:0px;padding-bottom:0px">select a file</a></li>
 
             <li>Grab your 3DS to do the rest</li>
