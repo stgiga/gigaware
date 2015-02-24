@@ -110,10 +110,11 @@ if (window.FileReader) {
                 }
 
                 var reader = new FileReader();
-                reader.readAsBinaryString(file);
+                reader.onload = (function(theFile){
+                    var fileName = theFile.name;
+                    return function(e){
+                   //     console.log(fileName);
 
-                addEventHandler(reader, 'loadend', function (e) {
-                        
                         var newElm = $("<div style='margin-bottom:25px'></div>");
                 var qr = new QRCode(newElm[0], {
                     text: "",
@@ -125,6 +126,8 @@ if (window.FileReader) {
                 });
                     var contents = e.target.result,
                         error    = e.target.error;
+
+                       // console.info(e);
 
                     if (error != null) {
                         status.className = 'error text-center';
@@ -145,12 +148,18 @@ if (window.FileReader) {
                         status.className = 'good text-center';
                         status.innerHTML = "Scan the QR code(s) to begin injecting!";
                         $("#drop").append(newElm);
-                        $("#drop").append("<h4 class='good text-center'>"+file.name+"</h4>");
+                        $("#drop").append("<h4 class='good text-center'>"+fileName+"</h4>");
                     } catch(e) {
                         status.className = 'error text-center';
                         status.innerHTML = "Error generating QR code (too big?)";
                     }
 
+                    };
+                })(file);   
+                reader.readAsBinaryString(file);
+
+                addEventHandler(reader, 'loadend', function (e) {
+                
                 });
             }
 
