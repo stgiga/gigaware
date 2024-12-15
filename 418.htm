@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        <!--
+        @font-face {
+  font-family: 'UnifontExMono';
+  src: url('http://UnifontEX.sourceforge.io/UnifontExMono.eot'); /* IE9 Compat Modes */
+  src: url('http://UnifontEX.sourceforge.io/UnifontExMono.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('https://UnifontEX.sourceforge.io/UnifontExMono.woff') format('woff'), /* Pretty Modern Browsers */
+       url('https://UnifontEX.sourceforge.io/UnifontExMono.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('http://UnifontEX.sourceforge.io/UnifontExMono.woff2') format('woff2'), /* Super Modern Browsers */
+       url('http://UnifontEX.sourceforge.io/UnifontExMono.svg#UnifontExMono') format('svg'); /* Legacy iOS */
+}
+
+        html {
+            font-family: 'UnifontExMono';
+        }
+        //-->
+
+    </style>
+<meta charset="UTF-8">
+<script type="text/javascript" language="JavaScript">
+<!--
+toggleItem = function(){
+    var el = document.getElementsByTagName('blink')[0];
+    if (el.style.visibility === 'hidden') {
+        el.style.visibility = 'visible';
+    } else {
+        el.style.visibility = 'hidden';
+    }
+}
+
+setInterval(toggleItem, 1000);
+//-->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!--
+function r() {
+    return Math.floor(Math.random() * 255);
+}
+ 
+function lemon() {
+    with(this.style) {
+        color = ['rgb(', [r(), r(), r()].join(','), ')'].join('');
+        backgroundColor = ['rgb(', [r(), r(), r()].join(','), ')'].join('');
+    }
+}
+ 
+function rocks() {
+    Array.prototype.forEach.call(document.getElementsByTagName('rainbow'), function(item) {
+        setTimeout(function() {
+            lemon.call(item);
+        }, Math.random() * 100 + 100);
+    });
+    setTimeout(rocks, Math.random() * 500 + 100);
+}
+ 
+rocks();
+//-->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!--
+/*
+function stgigas() {
+    window.location.assign("javascript:function%20c(){return%20Math.floor(255*Math.random())}function%20g(){var%20a=parseFloat(this.dataset.d);isNaN(a)&&(a=~~(100*Math.random()));with(this.style){var%20d=/rgb\((\d{1,3}),%20(\d{1,3}),%20(\d{1,3})\)/,b=d.exec(color),e={c:c(),b:c(),a:c()},f={c:c(),b:c(),a:c()};null!==b&&(e={c:b[1],b:b[2],a:b[3]});b=d.exec(backgroundColor);null!==b&&(f={c:b[1],b:b[2],a:b[3]});a+=0.5;100<a&&(a=0);cCycle=a+50;100<cCycle&&(cCycle-=100);h(e,cCycle);h(f,a);color='rgb('+e.c+','+e.b+','+e.a+')';backgroundColor='rgb('+f.c+','+f.b+','+f.a+')'}this.dataset.d=a}function%20j(){Array.prototype.forEach.call(document.getElementsByTagName('colormatic'),function(a){setTimeout(function(){g.call(a)},10)});setTimeout(j,10)}function%20h(a,d){a.c=~~(127*Math.sin(0.3*d+0)+128);a.b=~~(127*Math.sin(0.3*d+2)+128);a.a=~~(127*Math.sin(0.3*d+4)+128)}j()")
+}
+stgigas();
+*/
+function c(){return Math.floor(255*Math.random())}function g(){var a=parseFloat(this.dataset.d);isNaN(a)&&(a=~~(100*Math.random()));with(this.style){var d=/rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/,b=d.exec(color),e={c:c(),b:c(),a:c()},f={c:c(),b:c(),a:c()};null!==b&&(e={c:b[1],b:b[2],a:b[3]});b=d.exec(backgroundColor);null!==b&&(f={c:b[1],b:b[2],a:b[3]});a+=0.5;100<a&&(a=0);cCycle=a+50;100<cCycle&&(cCycle-=100);h(e,cCycle);h(f,a);color='rgb('+e.c+','+e.b+','+e.a+')';backgroundColor='rgb('+f.c+','+f.b+','+f.a+')'}this.dataset.d=a}function j(){Array.prototype.forEach.call(document.getElementsByTagName('colormatic'),function(a){setTimeout(function(){g.call(a)},10)});setTimeout(j,10)}function h(a,d){a.c=~~(127*Math.sin(0.3*d+0)+128);a.b=~~(127*Math.sin(0.3*d+2)+128);a.a=~~(127*Math.sin(0.3*d+4)+128)}j()
+
+//-->
+</script>
+    <script type="text/javascript" language="JavaScript">
+<!--
+        window.onload = function()
+        {
+            var txt = document.getElementsByTagName('obfuscated')[0];
+            var words = txt.innerHTML.split(' ');
+            var new_word = '';
+            var wordArr = [];
+
+            setInterval( function(){
+                txt.innerHTML = '';
+
+                for( i=0; i<words.length; i++ )
+                {
+                    new_word = '';
+                    wordArr = [];
+                    for( x=0; x<words[i].length; x++ )
+                    {
+                        wordArr.push( words[i][x] );
+                    }
+                    wordArr.sort( function(){ return 0.5 - Math.random() } );
+                    txt.innerHTML += wordArr.join('') + ' ';
+                }
+            }, 100 );
+        }
+//-->
+    </script>
+<script type="text/javascript" language="JavaScript">
+<!--
+window.addEventListener('load', function () {
+    function go() {
+        i = i < width ? i + step : 1;
+        m.style.marginLeft = -i + 'px';
+    }
+    var i = 0,
+        step = 3,
+        space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+    var m = document.getElementsByTagName('marquee2');
+    var t = m.innerHTML; //text
+    m.innerHTML = t + space;
+    m.style.position = 'absolute'; // http://stackoverflow.com/questions/2057682/determine-pixel-length-of-string-in-javascript-jquery/2057789#2057789
+    var width = (m.clientWidth + 1);
+    m.style.position = '';
+    m.innerHTML = t + space + t + space + t + space + t + space + t + space + t + space + t + space;
+    m.addEventListener('mouseenter', function () {
+        step = 0;
+    }, true);
+    m.addEventListener('mouseleave', function () {
+        step = 3;
+    }, true);
+    var x = setInterval(go, 50);
+}, true);
+//-->
+</script>
+<style type="text/css" media="screen">
+<!--
+/*Do not Alter these. Set for alignment*/
+.css1{
+position:absolute;top:0px;left:0px;
+width:16px;height:16px;
+font-family:Arial Unicode MS,Arial,sans-serif;
+font-size:16px;
+text-align:center;
+font-weight:bold;
+}
+.css2{
+position:absolute;top:0px;left:0px;
+width:10px;height:10px;
+font-family:Arial Unicode MS,Arial,sans-serif;
+font-size:10px;
+text-align:center;
+}
+//-->
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+// The Array Function 
+
+function makeArray(len) {
+    for (var i = 0; i < len; i++) this[i] = null;
+this.length = len;
+}
+
+// This is where the array of text/images/sounds is created.
+
+ar = new makeArray(572);
+ar[0] = "<u>Everything</u> <i>will</i> now come your way.";
+ar[1] = "<b>Now</b> <i>is</i> the time to try something new."
+ar[2] = "A <i>handful</i> of <u>patience</u> <i>is</i> worth <b>more</b> than a <b>bushel</b> of <b>brains</b>."
+ar[3] = "<i>You</i> have an active mind <i>and a keen imagination</i>."
+ar[4] = "<b>Don't</b> let <i>doubt</i> and suspicion <b>bar</b> your progress."
+ar[5] = "<i>You will</i> make a <u>fortune</u> <i>with</i> your friend."
+ar[6] = "Your emotional nature is strong <i>and</i> sensitive."
+ar[7] = "<i>You will</i> find a <u>treasure</u> at <b>this</b> web site."
+ar[8] = "<b>Sing <i>and</i> rejoice</b>, <i>fortune <u>is smiling on you</u></i>."
+ar[9] = "<i>You have</i> <u>remarkable</u> power which you are not using."
+ar[10] = "Your venture <i>will be</i> a <b>success</b>."
+ar[11] = "Accept the <b>next</b> proposition you hear."
+ar[12] = "A cheerful letter or message <i>is</i> on <i>its</i> way to you."
+ar[13] = "<b>You are just <i>beginning</i> to live</b>."
+ar[14] = "Love <i>is</i> a roller coaster,<br /><i>it</i> has its ups and downs."
+ar[15] = "<i>You will</i> find a <u>treasure</u> at <b>this</b> web site."
+ar[16] = "The great joy <i>in</i> life <i>is</i> doing what people say you cannot do."
+ar[17] = "<i>You are a <b>bundle</b> of energy,<br />always on the go.</i>"
+ar[18] = "Your <i>dearest</i> <u>wish</u> <i>will</i> come <b>true</b>."
+ar[19] = "<i>You have at your command<br />the wisdom of the ages.</i>"
+ar[20] = "<i>You will</i> <u>travel</u> to <b>many</b> places."
+ar[21] = "<i>You are careful & systematic<br />in your business arrangements.</i>"
+ar[22] = "<i>To one who waits</i>, a <u>moment</u> seems a <b>year</b>."
+ar[23] = "<i>Your</i> <u>wisdom</u> has kept <i>you</i> <b>far</b> away from <b>danger</b>."
+ar[24] = "<i>You will</i> have a <u>fine</u> capacity <i>for</i> the <u>enjoyment</u> of <i>life</i>."
+ar[25] = "<i>You will</i> reach the height of <b>success</b> <i>in</i> <u>whatever</u> you <b>do</b>."
+ar[26] = "<i>Consolidate</i> rather than <u>expand</u> your <b>business</b> <i>in</i> the <i>near</i> <u>future</u>."
+ar[27] = "<i>Your</i> <u>principles</u> <i>mean</i> <b>more</b> to <i>you</i> than <u>any</u> <u>money</u> <i>or</i> <u>success</u>."
+ar[28] = "<i>You have a deep appreciation<br />of the arts and music.</i>"
+ar[29] = "You display the <b>wonderful</b> traits of <i>charm and courtesy</i>."
+ar[30] = "<i>You are</i> <u>talented</u> <i>in</i> <b>many</b> ways."
+ar[31] = "<b>Good</b> <u>fortune</u> awaits <i>you</i> at the end of the day."
+ar[32] = "Treat <u>everyone</u> as a friend."
+ar[33] = "<i>You are</i> <u>the guiding star</u> <i>of</i> <b>his</b> existence."
+ar[34] = "<i>You are</i> <u>open <i>and</i> honest</u> <i>in your</i> <u>philosophy</u> <i>of</i> love."
+ar[35] = "<u>Simplicity</u> <i>should</i> <b>be</b> <i>your</i> <u>theme in dress</u>."
+ar[36] = "<i>You will</i> <b>be</b> <u>fortunate</u> <i>in</i> <b>the</b> <u>opportunities presented</u> <i>to</i> <b>you</b>."
+ar[37] = "<i>You can</i> <u>open doors</u> <i>with your</i> <u>charm <i>and</i> patience.</u>"
+ar[38] = "<i>Your <u>talents</u> will</i> <b>be</b> <u>recognized <b>and</b> <i>suitably</i> rewarded</u>."
+ar[39] = "Don't <b>be</b> <u>hasty</u>, prosperity <b>will</b> knock on your door <i>soon</i>."
+ar[40]='There are some people who live in a dream world, and there are some who face reality; and then there are those who turn one into the other. <i>-<b>By</b> Douglas Everett</i>'
+ar[41]='Whether you think you can or whether you think you can\'t, you\'re right! <i>-Henry Ford</i>'
+ar[42]='I know of no more encouraging fact than the unquestionable ability of man to elevate his life by conscious endeavor. <i>-Henry David Thoreau</i>'
+ar[43]='Do not let what you cannot do interfere with what you can do. <i>-John Wooden</i>'
+ar[44]='Accept everything about yourself - I mean everything, You are you and that is the beginning and the end - no apologies, no regrets. <i>-Clark Moustakas</i>'
+ar[45]='We must accept life for what it actually is - a challenge to our quality without which we should never know of what stuff we are made, or grow to our full stature. <i>-Ida R. Wylie</i>'
+ar[46]='High achievement always takes place in the framework of high expectation. <i>-Jack Kinder</i>'
+ar[47]='The measure of a man is the way he bears up under misfortune. <i>-Plutarch</i>'
+ar[48]='Don\'t wait for your ship to come in, swim out to it. <i>-Anon</i>'
+ar[49]='As I grow older, I pay less attention to what men say. I just watch what they do. <i>-Andrew Carnegie</i>'
+ar[50]='No steam or gas ever drives anything until it is confined. No Niagara is ever turned into light and power until it is tunneled. No life ever grows until it is focused, dedicated, disciplined. <i>-Harry Emerson Fosdick</i>'
+ar[51]='The words printed here are concepts. You must go through the experiences. <i>-Carl Frederick</i>'
+ar[52]='Man cannot discover new oceans unless he has the courage to lose sight of the shore. <i>-Andre Gide</i>'
+ar[53]='The wise man does at once what the fool does finally. <i>-Baltasar Gracian</i>'
+ar[54]='The world has the habit of making room for the man whose actions show that he knows where he is going. <i>-Napoleon Hill</i>'
+ar[55]='Success seems to be connected with action. Successful men keep moving. They make mistakes, but they don\'t quit. <i>-Conrad Hilton</i>'
+ar[56]='Do the things you know, and you shall learn the truth you need to know. <i>-George Macdonald</i>'
+ar[57]='I have never heard anything about the resolutions of the apostles, but a good deal about their acts. <i>-Horace Mann</i>'
+ar[58]='Let us not be content to wait and see what will happen, but give us the determination to make the right things happen. <i>-Peter Marshall</i>'
+ar[59]='I hear and I forget, I see and I remember. I do and I understand. <i>-Chinese Proverb</i>'
+ar[60]='One may walk over the highest mountain one step at a time. <i>-John Wanamaker</i>'
+ar[61]='Every action is either strong or weak, and when every action is strong we are successful. <i>-Wallace D. Wattles</i>'
+ar[62]='If we do what is necessary, all the odds are in our favor. <i>-Henry Kissinger</i>'
+ar[63]='Little minds are tamed and subdued by misfortune; but great minds rise above them. <i>-Washington Irving</i>'
+ar[64]='When an affliction happens to you, you either let it defeat you, or you defeat it... <i>-Rosalind Russell</i>'
+ar[65]='There\'s a basic human weakness inherent in all people which tempts them to want what they can\'t have and not want what is readily available to them. <i>-Robert J. Ringer</i>'
+ar[66]='If there is something to gain and nothing to lose by asking, by all means ask! <i>-W. Clement Stone</i>'
+ar[67]='It\'s not the situation ... It\'s your reaction to the situation <i>-Robert Conklin</i>'
+ar[68]='Life at any time can become difficult: life at any time can become easy.  It all depends upon how one adjusts oneself to life. <i>-Morarji Desai</i>'
+ar[69]='What happens is not as important as how you react to what happens. <i>-Thaddeus Golas</i>'
+ar[70]='To hell with circumstances; I create opportunities. <i>-Bruce Lee</i>'
+ar[71] = "<u>Nothing</u> <i>is</i> as easy as <i>it</i> looks."
+ar[72] = "<i>Everything</i> takes <u>longer</u> than you <b>think</b>."
+ar[73] = "<u>Anything</u> that can go wrong <b>will</b> go wrong."
+ar[74] = "<i>If</i> there <i>is</i> a <i>possibility</i> of <u>several</u> things going wrong, <i>the one that will cause the most damage</i> <u>will <b>be</b></u> <b>the one</b> to go wrong."
+ar[75] = "<i>If</i> there <i>is</i> a <u>worse</u> time for something to go wrong, <b><i>it</i> will</b> happen then."
+ar[76] = "<i>If</i> anything <u>simply</u> <b>cannot</b> go wrong, <i>it <b>will</b></i> anyway."
+ar[77] = "<i>If</i> you <i>perceive</i> that there are <u>four possible ways</u> <i>in which a procedure can</i> go wrong, and <u>circumvent</u> these, then a <b>fifth way</b>, <u>unprepared for</u>, will <i>promptly</i> develop."
+ar[78] = "<i>Left to themselves</i>, things tend to go from <u>bad</u> to <b>worse</b>."
+ar[79] = "<u>If</u> <i>everything</i> <u>seems</u> to be going <b>well</b>, you have <i>obviously</i> overlooked <u>something</u>."
+ar[80] = "Nature <b>always</b> sides with the <i>hidden</i> <u>flaw</u>."
+ar[81] = "Mother nature <i>is</i> a <b>bitch</b>."
+ar[82] = "<u>It</u> <i>is</i> <b>impossible</b> to make anything <i>\"foolproof\"</i> because \"fools\" <i>are so</i> <i>ingenious</i>."
+ar[83] = "Whenever <i>you</i> set out to do <i>something</i>, <u>something</u> <i>else</i> <u>must</u> be done <b>first</b>."
+ar[84] = "<i>Every</i> solution <b>breeds</b> new problems."
+ar[85] = "<i>Trust everybody</i> ... <u>then</u> cut the cards."
+ar[86] = "Two wrongs are only the <b>beginning</b>."
+ar[87] = "<i>If</i> at <u>first</u> you <b>don't</b> succeed, destroy <u>all</u> evidence that you tried."
+ar[88] = "To succeed <u>in</u> <i>politics</i>, <u>it</u> <i>is</i> often necessary to rise above your principles."
+ar[89] = "<i>Exceptions</i> prove the rule ... <i>and</i> wreck the <b>budget</b>."
+ar[90] = "Success <u>always</u> occurs <i>in</i> private, and failure <i>in</i> <u>full view</u>."
+ar[91]="<b>Warning:</b> Dates <i>in</i> Calendar are <b>closer</b> than they <i>appear</i>.";
+ar[92]="Daddy, why doesn't this magnet pick up this floppy disk?"
+ar[93]="<b>Give me ambiguity</b>, <i>or</i> give me <u>something</u> else."
+ar[94]="<b>I.R.S.:</b> We've got what <i>it</i> takes <i>to</i> take what <u>you've</i> got!"
+ar[95]="We are <b>born</b> naked, wet and hungry.  Then things get worse."
+ar[96]="Pentiums melt <i>in</i> your PC, not <i>in</i> your hand."
+ar[97]="<b>Suicidal twin kills sister by mistake!</b>" 
+ar[98]="<i>Did anyone see my lost carrier</i>?"
+ar[99]="Make <i>it</i> \"<i>idiot</i> proof\", and someone will make a \"<b>better</b> <i>idiot</i>\"."
+ar[100]="<i>I'm</i> not a complete <i>idiot,</i> <i>some</i> parts <i>are</i> missing!"
+ar[101]="He who laughs <i>last</i> thinks \"slowest\"!"
+ar[102]="<b>Always remember</b>, you're <u>unique</u>, <i>just like everyone else</i>."
+ar[103]="Save the whales, collect the whole set."
+ar[104]="A flashlight <i>is</i> a case for holding \"dead\" <b>batteries</b>."
+ar[105]="<i>Lottery:</i> A tax <i>on</i> people <u>who</u> <i>are</i> <b>bad</b> <i>at</i> math."
+ar[106]="There's too much <b>\"blood\"</b> <i>in</i> my \"caffeine\" system."
+ar[107]="\"<i>Artificial</i>\" \"<i>Intelligence</i>\" usually beats \"real\" \"stupidity\"."
+ar[108]="<b>Hard work</b> <i>has</i> a <u>future</u> payoff.  Laziness pays off <b>now</b>."
+ar[109]="<i>Friends</i> help you move. <u>Real</u> \"friends\" help you move <b>bodies</b>."
+ar[110]="<i>I</i> won't rise to the occasion, <i>but</i> I'll <b>slide</b> over to <i>it</i>."
+ar[111]="Ever notice how fast Windows runs?  <i>Neither did I</i>."
+ar[112]="Double your drive space - delete Windows!"
+ar[113]="What <i>is</i> a free gift? Aren't all gifts free?"
+ar[114]="<i>If ignorance is</i> <b>bliss</b>, you <i>must</i> be orgasmic."
+ar[115]="Very funny, Scotty. Now <b>beam</b> down <i>my</i> clothes."
+ar[116]="<i>Puritanism:</i> The haunting fear that <u>someone</u>, <i>somewhere</i> may <b>be</b> happy."
+ar[117]="<i>Consciousness:</i> that annoying time between naps."
+ar[118]="Oops. My <b>brain</b> <i>just</i> hit a <b>\"bad</b> sector\"."
+ar[119]="<i>I</i> used to have a handle on life, <i>then</i> it <b>broke</b>."
+ar[120]="Don't take life too seriously, you <i>won't</i> get out alive."
+ar[121]="<i>I</i> don't \"suffer from\" <i>\"insanity\".</i>  <i>I</i> \"enjoy\" every minute of <i>it</i>."
+ar[122]="A pedestrian \"hit\" <i>me</i> and went under <i>my</i> car."
+ar[123]="Better to understand a little than to misunderstand a lot."
+ar[124]="The <b>\"gene pool\"</b> <i>could</i> use a <i>little</i> <u>chlorine</u>."
+ar[125]="<b>When there's a will, <i>I</i> want to be <u>in</u> <i>it</i>.</b>"
+ar[126]="Okay, <i>who put a stop payment</i> <b>on my</b> <u>reality check</u>?"
+ar[127]="Few women admit their age.  Few men act theirs."
+ar[128]="<i>I'm</i> as confused as a <b>baby</b> <i>in</i> a topless <b>bar</b>."
+ar[129]="We have enough <i>youth</i>, how about a fountain of <b>\"SMART\"</b>?"
+ar[130]="<u>All</u> <i>generalizations</i> are false, <u>including</u> <b>this one</b>."
+ar[131]="Change <i>is</i> inevitable, <u>except</u> from a vending machine."
+ar[132]="<i>C program run.</i>  <u>C program crash.</u>  <b>C programmer quit.</b>"
+ar[133]="<b>\"Criminal Lawyer\"</b> <i>is</i> a redundancy."
+ar[134]="\"640K <i>ought</i> to <b>be</b> <u>enough</u> for <b>anybody</b>.\" - \"Bill Gates 1981\""
+ar[135]="90% of all statistics <i>are</i> made up."
+ar[136]="A man <b>needs</b> a good memory <u>after</u> <b>he</b> <i>has</i> <u>lied</u>."
+ar[137]="A little work, a little sleep, a little love and <u>it</u> <i>is</i> all over."
+ar[138]="A <b>lot</b> of people <u>mistake</u> a <i>short</i> memory <i>for</i> a <u>clear</u> conscience."
+ar[139]="<b>Apple</b> Copyright 6024 B.C., <i>Adam & Eve</i>"
+ar[140]="<b>Apple</b> Copyright 1767, <i>Sir Isaac Newton</i>."
+ar[141]="<b>Bad</b> knee, <i>gotta</i> <u>run</u> - Pat Buchanan to his draft board."
+ar[142]="<b>Beam</b> me <b>aboard,</b> Scotty..... Sure. Will a \"<u>2x10</u>\" do?"
+ar[143]="<u>Beulah</u>, <i>peel me a grape</i>."
+ar[144]="<i>Bother</i>, said Pooh as the <b>brakes</b> went out!"
+ar[145]="<u>Build a Watch in 179 Easy Steps</u> - <i>By C. Forsberg</i>."
+ar[146]="<u>\"C++\"</u> should have been called <b>\"B\".</b>"
+ar[147]="<b>COINCIDENCE</b> <i>happens</i>."
+ar[148]="<i>Calvin</i>, we <u>will</u> <b>not</b> have an \"anatomically correct snowman!\""
+ar[149]="<i>Careful</i>.  We <u>don't</u> want to learn from this. -- Calvin"
+ar[150]="<b>Energizer Bunny Arrested! Charged with battery.</b>"
+ar[151]="\"Great spirits have always encountered violent opposition from mediocre minds.\"  -Albert Einstein";
+ar[152]="\"Tis nobler to lose honor to save the lives of men than tis to gain honor by taking them.\"  -David Borenstein"
+ar[153]="\"Freedom is that instant between when someone tells you to do something and when decide how to respond.\"  -Jeffery Borenstein"
+ar[154]="\"To live a pure unselfish life, one must count nothing as one's own in the midst of abundance.\"  -Buddha"
+ar[155]="\"We need more people who specialize in the impossible.\"  -Unknown"
+ar[156]="\"It is not enough to have a good mind; the main thing is to use it well.\"  -Rene Descartes"
+ar[157]="\"Fall seven times, stand up eight.\"  -Japanese Proverb" 
+ar[158]="\"Every problem has a gift for you in its hands.\" -Richard Bach"
+ar[159]="\"Enjoy life. There's plenty of time to be dead.\" -Unknown"
+ar[160]="\"One's mind, once stretched by a new idea, never regain sits original dimensions.\"  -Oliver Wendel Holmes"
+ar[161]="\"Nothing is so strong as gentleness and nothing is so gentle as real strength.\"  -Ralph W. Sockman"
+ar[162]="\"Wisdom begins in wonder.\"  -Socrates"
+ar[163]="\"Live out of your imagination, not your history.\" -Stephen Covey"
+ar[164]="\"People only see what they are prepared to see.\" -Ralph Waldo Emerson"
+ar[165]="\"Thinking: The talking of the soul with itself.\" -Plato"
+ar[166]="\"Liberty means responsibility. That is why most men dread it.\"  -George Bernard Shaw"
+ar[167]="\"The only thing necessary for the triumph of evil is for good men to do nothing.\"  -Edmund Burke"
+ar[168]="\"To accomplish great things, we must not only act, but also dream; not only plan, but also believe.\"  -Anatole France"
+ar[169]="\"You must do the things you think you cannot do.\" -Eleanor Roosevelt"
+ar[170]="\"You get the best out of others when you give the best of yourself.\"  -Harry Firestone"
+ar[171]="\"Real riches are the riches possessed inside.\"  -B. C. Forbes"
+ar[172]="\"Choose your friends by their character and your socks by their color.  Choosing your socks by their character makes no sense, and choosing your friends by their color is unthinkable.\"  -Unknown"
+ar[173]="\"You must be the change you wish to see in the world.\"  -Gandhi"
+ar[174]="\"When you get to the end of your rope, tie a knot and hang on.\"  -Franklin D. Roosevelt"
+ar[175]="\"What you do speaks so loudly that I cannot hear what you say.\"  -Ralph Waldo Emerson"
+ar[176]="\"Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.\"  -Mark Twain"
+ar[177]="\"Use what talent you possess: the woods would be very silent if no birds sang except those that sang best.\"  -Henry Van Dyke"
+ar[178]="\"Where there is great love, there are always wishes.\"  -Willa Cather"
+ar[179]="\"The supreme happiness in life is the conviction that we are loved.\"  -Victor Hugo"
+ar[180]="\"You don't get harmony when everybody sings the same note.\"  -Doug Floyd"
+ar[181]="\"When you are content to be simply yourself and don't compare or compete, everybody will respect you.\"  -Lao-Tzu"
+ar[182]="\"Fear less, hope more; Whine less, breathe more; Talk less, say more; Hate less, love more; And all good things are yours.\"  -Swedish Proverb"
+ar[183]="\"Learn from yesterday, live for today, hope for tomorrow.\"  -Unknown"
+ar[184]="\"People are just as happy as they make up their minds to be\"  -Abraham Lincoln"
+ar[185]="\"Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them.\"  -William Shakespeare"
+ar[186]="\"Do what you can, with what you have, where you are.\" -Theodore Roosevelt"
+ar[187]="\"He who dies with the most toys is, nonetheless, still dead.\"  -Unknown"
+ar[188]="\"Be true to your work, your word, and your friend.\"  -Henry David Thoreau"
+ar[189]="\"Without a struggle, there can be no progress.\" -Frederick Douglass"
+ar[190]="\"Problems are only opportunities in work clothes.\"  -Henry Kaiser"
+ar[191]="\"If you don't like something, change it. If you can't change it, change your attitude. Don't complain.\"  -Maya Angelou"
+ar[192]="\"Dreams are the touchstones of our character.\"  -Henry David Thoreau"
+ar[193]="\"Those who do not remember the past are condemned to repeat it.\"  -George Santayana"
+ar[194]="\"May you live every day of your life.\"  -Jonathan Swift"
+ar[195]="\"Without change, something sleeps inside us, and seldom awakens. The sleeper must awaken.\"  -Frank Herbert"
+ar[196]="\"Every problem has a gift for you in its hands.\"  -Richard Bach"
+ar[197]="\"An insincere and evil friend is more to be feared than a wild beast; a wild beast may wound your body, but an evil friend will wound your mind.\"  -Buddha"
+ar[198]="\"Look at everything as though you were seeing it for the first time or the last time. Then your time on earth will be filled with glory.\"  -Betty Smith"
+ar[199]="\"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.\"  -Buddha"
+ar[200]="\"The Lord is my light, and my salvation; whom shall I fear?\"  -Psalm 27"
+ar[201]="\"Don't be afraid to take a big step. You can't cross a chasm in two small jumps.\"  -David Lloyd George"
+ar[202]="\"Tomorrow is a new day; you shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.\"  -Ralph Waldo Emerson"
+ar[203]="\"Minds are like parachutes; they work best when open.\"  -Lord Thomas Dewar"
+ar[204]="\"One thing you can't recycle is wasted time.\"  -Anonymous"
+ar[205]="\"The purpose of life is a life of purpose.\"  -Robert Byrne"
+ar[206]="\"It is good to have an end to journey toward, but it is the journey that matters in the end.\"  -Ursula K. LeGuin"
+ar[207]="\"It is one of the most beautiful compensations of life, that no man can sincerely try to help another without helping himself.\"  -Ralph Waldo Emerson"
+ar[208]="\"The question is not whether we will die, but how we will live.\"  -Joan Borysenko"
+ar[209]="\"What lies behind us and what lies before us are tiny matters compared to what lies within us.\"  -Oliver Wendell Holmes"
+ar[210]="\"We are what we repeatedly do. Excellence, then is not an act, but a habit.\"  -Aristotle"
+ar[211]="\"There are no mistakes, no coincidences. All events are blessings given to us to learn from.\"  -Dr. Elisabeth Kubler-Ross"
+ar[212]="\"It is only with the heart that one can see rightly; what is essential is invisible to the eye.\"  -Antoine De Saint-Exupery"
+ar[213]="\"You live through the darkness from what you learned in the light.\"  -Hope MacDonald"
+ar[214]="\"He who knows others is wise. He who knows himself is enlightened.\"  -Anonymous"
+ar[215]="\"Never be bullied into silence. Never allow yourself to be made a victim. Accept no one's definition of your life; define yourself.\"  -Harvey Fierstein"
+ar[216]="\"Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.\"  -Martin Luther King, Jr."
+ar[217]="\"The important thing is not to stop questioning.\" -Albert Einstein"
+ar[218]="\"In three words I can sum up everything I've learned about life: it goes on.\"  -Robert Frost"
+ar[219]="\"The journey is the reward.\"  -Tao Saying"
+ar[220]="\"Never look down on anybody unless you helping him up.\"  -Jesse Jackson"
+ar[221]="\Knowing is not enough; we must apply. Willing is not enough; we must do.\"  -Goethe"
+ar[222]="\"The less you open your heart to others, the more your heart suffers.\"  -Deepak Chopra"
+ar[223]="\"There are no shortcuts to any place worth going.\" -Unknown"
+ar[224]="\"I learned that it is the weak who are cruel, and that gentleness is to be expected only from the strong.\"  -Leo Rosten"
+ar[225]="\"Looking back, I have this to regret, that too often when I loved, I did not say so.\"  -David Grayson"
+ar[226]="\"He who angers you conquers you.\"  -Elizabeth Kenny"
+ar[227]="\"Tell me who admires you and loves you, and I will tell you who you are.\"  -Charles Augustin Sainte-Beauve"
+ar[228]="\"The last of the human freedoms is to choose one's attitudes.\"  -Victor Frank"
+ar[229]="\"No bird soars too high if he soars with his own wings.\"  -William Blake"
+ar[230]="\"Man is free at the moment he wishes to be.\"  -Voltaire"
+ar[231]="\"We must use time wisely and forever realize that the time is always ripe to do right.\"  -Nelson Mendela"
+ar[232]="\"Nurture your mind with great thoughts.\"  -Benjamin Disraeli"
+ar[233]="\"Teachers open the door, but you must enter by yourself.\"  -Chinese Proverb"
+ar[234]="\"If you find it in your heart to care for somebody else, you will have succeeded.\"  -Maya Angelou"
+ar[235]="\"You, yourself, as much as anybody in the entire universe, deserve your love and affection.\"  -Buddha"
+ar[236]="\"Shoot for the moon. Even if you miss, you'll land among the stars.\"  -Les Brown"
+ar[237]="\"The only way to have a friend is to be one.\"  -Ralph Waldo Emerson"
+ar[238]="\"This life is worth living, we can say, since it is what we make it.\"  -William James"
+ar[239]="\"A friend is one who knows you and loves you just the same.\"  -Elbert Hubbard"
+ar[240]="\"People who fight fire with fire usually end up with ashes.\"  -Abigail Van Buren"
+ar[241]="\"Knowledge is power.\"  -Francis Bacon"
+ar[242]="\"Nothing great was ever achieved without enthusiasm.\" -Ralph Waldo Emerson"
+ar[243]="\"Every exit is an entry somewhere.\"  -Tom Stoppard"
+ar[244]="\"It's always too early to quit.\"  -Norman Vincent Pearle"
+ar[245]="\"A person who aims at nothing is sure to hit it.\"  -Anonymous"
+ar[246]="\"A journey of a thousand miles begins with a single step.\"  -Confucius"
+ar[247]="\"This above all; to thine own self be true.\"  -William Shakespeare"
+ar[248]="\"Friends are treasures.\"  -Horace Bruns"
+ar[249]="\"We never know the worth of water 'til the well is dry.\"  -English Proverb"
+ar[250]="\"A thief believes everybody steals.\"  -E.W. Howe"
+ar[251]="\"It takes a great man to be a good listener.\"  -Calvin Coolidge"
+ar[252]="\"If you love something, let it go. If it comes back it's yours. If it doesn't, it never really was in the first place.\"  -Unknown"
+ar[253]="\"It is a man's own mind, not his enemy or foe, that lures him to evil ways.\"  -Buddha"
+ar[254]="\"Assumptions allow the best in life to pass you by.\"  -John Sales"
+ar[255]="\"Live free or die.\"  -New Hampshire"
+ar[256]="\"Fall seven times, stand up eight.\"  -Japanese Proverb"
+ar[257]="\"Courage is not the absence of fear, but rather the judgement that something else is more important than fear.\"  -Ambrose Redmoon"
+ar[258]="\"Live as if your were to die tomorrow. Learn as if you were to live forever.\"  -Gandhi"
+ar[259]="\"Here is the test to find whether your mission on Earth is finished: if you're alive, it isn't.\"  -Richard Bach"
+ar[260]="\"Fear is that little darkroom where negatives are developed.\"  -Michael Pritchard"
+ar[261]="\"All life is an experiment.\"  -Ralph Waldo Emerson"
+ar[262]="\"Men are born to succeed, not to fail.\"  -Henry David Thoreau"
+ar[263]="\"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.\"  -Albert Einstein"
+ar[264]="\"The sweetest of all sounds is praise.\"  -Xenophon"
+ar[265]="\"Believe that life is worth living and your belief will help create the fact.\"  -William James"
+ar[266]="\"The most wasted day of all is that during which we have not laughed.\"  -Sebastian R. N. Chamfort"
+ar[267]="\"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has opened for us.\"  -Helen Keller"
+ar[268]="\"Write the bad things that are done to you in sand, but write the good things that happen to you on a piece of marble.\"  -Arabic Parable"
+ar[269]="\"The only real mistake is the one from which we learn nothing.\"  -John Powell"
+ar[270]="\"You are never given a wish without also being given the power to make it come true. You may have to work for it, however.\"  -Richard Bach"
+ar[271]="\"We can try to avoid making choices by doing nothing, but even that is a decision.\"  -Gary Collins"
+ar[272]="\"A good head and a good heart are always a formidable combination.\"  -Nelson Mandela"
+ar[273]="\"Eighty percent of success is showing up.\"  -Woody Allen"
+ar[274]="\"The harder you work, the luckier you get.\"  -McAlexander"
+ar[275]="\"No one can make you feel inferior without your consent.\"  -Eleanor Roosevelt"
+ar[276]="\"The brighter you are, the more you have to learn.\"  -Don Herold"
+ar[277]="\"Even if you are on the right track, you'll get run over if you just sit there.\"  -Will Rogers"
+ar[278]="\"The expert at anything was once a beginner.\"  -Hayes"
+ar[279]="\"Somewhere, something incredible is waiting to be known.\"  -Carl Sagan"
+ar[280]="\"Laughter is the shortest distance between two people.\"  -Victor Borge"
+ar[281]="\"Hold fast to dreams, for if dreams die, life is a broken bid that cannot fly.\"  -Langston Hughes"
+ar[282]="\"We are what we think. All that we are arises with our thoughts. With our thoughts, we make the world.\"  -Buddha"
+ar[283]="\"Those who stand for nothing fall for anything.\"  -Alexander Hamilton"
+ar[284]="\"It is not length of life, but depth of life.\"  -Ralph Waldo Emerson"
+ar[285]="\"Just when you think that a person is just a backdrop for the rest of the universe, watch them and see that they laugh, they cry, they tell jokes ... they're just friends waiting to be made.\"  -Jeffery Borenstein"
+ar[286]="\"Everything has been figured out, except how to live.\"  -Jean-Paul Sartre"
+ar[287]="\"Listen or thy tongue will keep thee deaf.\"  -American Indian Proverb"
+ar[288]="\"The basis of optimism is sheer terror.\"  -Oscar Wilde"
+ar[289]="\"If you can imagine it, You can achieve it. If you can dream it, You can become it.\"  -William Arthur Ward"
+ar[290]="\"It is better to debate a question without settling it than to settle a question without debating it.\"  -Jeseph Joubert"
+ar[291]="\"Spoon feeding in the long run teaches us nothing but the shape of the spoon.\"  -E. M. Forster"
+ar[292]="\"The most beautiful thing we can experience is the mysterious.\"  -Albert Einstein"
+ar[293]="\"One should not stand at the foot of a sick person's bed, because that place is reserved for the guardian angel.\"  -Jewish Folk Saying"
+ar[294]="\"Some people weave burlap into the fabric of our lives, and some weave gold thread. Both contribute to make the whole picture beautiful and unique.\"  -Unknown"
+ar[295]="\"Happiness is a choice that requires effort at times.\"  -Unknown"
+ar[296]="\"Everyone is kneaded out of the same dough but not baked in the same oven.\"  -Yiddish Proverb"
+ar[297]="\"Consistency is the last resort of the unimaginative.\"  -Oscar Wilde"
+ar[298]="\"To confine our attention to terrestrial matters would be to limit the human spirit.\"  -Stephen Hawking"
+ar[299]="\"He is able who thinks he is able.\"  -Buddha"
+ar[300]="\"If you want rainbows, you have to put up with the rain.\"  -Dolly Parton"
+ar[301]="\"When I find myself fading, I close my eyes and realize my friends are my energy.\"  -Unknown"
+ar[302]="\"It was when I found out I could make mistakes that I knew I was on to something.\"  -Ornette Coleman"
+ar[303]="\"The world is so fast that there are days when the person who says it can't be done is interrupted by the person who is doing it.\"  -Unknown"
+ar[304]="\"The future belongs to those who believe in the beauty of their dreams.\"  -Eleanor Roosevelt"
+ar[305]="\"Diamonds are nothing more than chunks of coal that stuck to their jobs.\"  -Malcolm Forbes"
+ar[306]="\"If being an egomaniac means I believe in what I do and in my art or music, then in that respect you can call me that ... I believe in what I do, and I'll say it.\"  -John Lennon"
+ar[307]="\"Destiny is not a matter of chance, it is a matter of choice; it is not a thing to be waited for, it is a thing to be achieved.\"  -William Jennings Bryan"
+ar[308]="\"The mind is not a vessel to be filled but a fire to be kindled.\"  -Plutarch"
+ar[309]="\"You will find as you look back upon your life that the moments when you have truly lived are the moments when you have done things in the spirit of love.\"  -Henry Drummond"
+ar[310]="\"It is not for him to pride himself who loveth his own country, but rather for him who loveth the whole world. The earth is but one country and mankind its citizens.\"  -Baha'u'llah"
+ar[311]="When companies ship Styrofoam, what do they pack <i>it</i> <u>in</u>? "
+ar[312]="Why <i>is</i> a <b>\"carrot\"</b> more <i>\"orange\"</i> than an <b><i>\"orange\"</i></b>? "
+ar[313]="Why do we label underwear as a <i>\"pair\"</i>? "
+ar[314]="What would a chair <i>look</i> like, <i>if</i> your knees \"<i><b>bent</b></i>\" the other way? "
+ar[315]="Why do firehouses have Dalmatians? "
+ar[316]="Why <u>is</u> <i>it</i> called a <b>TV <i>\"set\",</i></b> when you only get one? "
+ar[317]="Why <i>in</i> a country with freedom of speech, are there phone <b>bills</b>? "
+ar[318]="Does the little mermaid wear an <i>\"algae<b>bra</b>\"</i>?"
+ar[319]="Why do scars <i>never</i> go away? "
+ar[320]="Why don't sheep <i>shrink</i> when <i>it</i> rains? "
+ar[321]="Why do old women dye their hair <b>blue</b>? "
+ar[322]="<i>Is</i>  \"laughing stock\" cattle with a sense of humor? "
+ar[323]="Why do they put <b>Braille</b> dots on the keypad of the drive-up ATM? "
+ar[324]="Should <u>you</u> <b>trust</b> a <i>stockbroker</i> who's married to a travel agent? "
+ar[325]="Why do they report power outages on TV? "
+ar[326]="Why do <b>tugboats</b> <u>push</u> <i>their</i> <b>barges</b>? "
+ar[327]="Sooner or later doesn't <i><b>EVERYONE</b></i> stop smoking? "
+ar[328]="Why <i>is</i> a <i>\"keyboard\"</i> called a <b>\"keyboard\"</b> <i>if</i> <u>it</u> just has little <b>buttons</b>? "
+ar[329]="<i>How can someone</i> <u>walk uphill</u> <b>both</b> ways through <b>32 feet</b> of <u>snow</u>?"
+ar[330]="<i>What</i> <u>is</u> <b>the purpose</b> <i>of <u>that</u></i> <i>little</i> <b>ball</b> on top of the flagpole? "
+ar[331]="<i>If</i> 75% of <u>all</u> <b>accidents</b> occur <i>within</i> <u>5 miles</u> <b>of</b> home, why not move 10 miles away? "
+ar[332]="Why does your nose run and your feet smell? "
+ar[333]="Will you die <i>if</i> you get scared half to death twice? "
+ar[334]="<i>What <i>is</i> the funny</i> <b>beep</b> on the <u>radio</u>, <b>just before</b> the network news? "
+ar[335]="<i>If</i> a <b>vampire</b> <i>can't</i> see <u>himself</u> <i>in</i> a mirror, why <i>is</i> his hair <i>always</i> <u>so neat</u>?"
+ar[336]="<i>If</i> a <i>cow</i> laughed, <i>would</i> <u>milk</u> come out <i>its</i> nose? "
+ar[337]="<i>If</i> 7-11 <i>is</i> open 24 hours a day, 365 days a year, why are there locks on the doors? "
+ar[338]="Why do <i>men's</i> <b>bicycles</b> have cross<b>bars</b>? "
+ar[339]="Why <i>is</i> the word <b><i>\"abbreviate\"</i></b> so long? "
+ar[340]="Do <b>married</b> people <u>live</u> <i>longer</i> than <b>single</b> people <i>do</i> or <u>does</u> it <i>just <u>seem</i> longer</u>?"
+ar[341]="Why do they <u>lock</u> gas station <b>bathrooms</b>? Are they afraid someone <i>is</i> <u>going</u> <b>to</b> <i>clean</i> <u>them</u>? "
+ar[342]="<u>Is</u> <i>it</i> true that <i>cannibals</i> <b>don't</b> <u>eat</u> <u>clowns</u> <i>because</i> <i>they</i> <u>taste</u> <b>funny</b>? "
+ar[343]="<i>If</i> the funeral procession <i>is</i> at night, do folks drive <u>with</u> <i>their</i> <u>headlights</u> <b>off</b>? "
+ar[344]="Can you <b>be</b> a <i>closet</i> <u>claustrophobic</u>?"
+ar[345]="<i>If</i> a parsley farmer <i>is</i> sued can they garnish his wages? "
+ar[346]="<i>If</i> you are <i>in</i> a vehicle going the speed of light, what happens <i>if you</i> turn <u>on</u> your <b>headlights</b>? "
+ar[347]="<i>Isn't</i> <i>Disneyland</i> a \"people trap\" operated <b>by</b> a <i>mouse</i>? "
+ar[348]="<i>If</i> you keep trying to prove \"<i>Murphy's Law</i>\", will something go wrong? "
+ar[349]="Do you need a <i>silencer</i> <i>if</i> you are going to <u>shoot</u> a <b>mime</b>?"
+ar[350]="<i>Are</i> people <b>born</b> \"stupid\" or do they <u>have</u> to <b>work</b> at <i>it</i>?"
+ar[351]="How did a \"fool\" and his \"money\" get \"together\"?"
+ar[352]="<i>If</i> the cops arrest a mime, do they tell him he has the right to remain silent? "
+ar[353]="<i>If</i> you <i>try</i> to <b>fail</b>, and <i><b>succeed</b></i> <i>which</i> have you done?"
+ar[354]="How can someone <i>\"draw\"</i> a <b>\"blank\"</b>?"
+ar[355]="Do toilet seats really protect us from anything?"
+ar[356]="Why do they call it \"<i>quicksand</i>,\" when it sucks you down <b><i>slowly</i></b>\"?"
+ar[357]="<i>If</i> <i>\"quitters\"</i> never <b>\"win\"</b>, and <i>\"winners</i>\" never <b>\"quit\"</b>, than who <i>is</i> the fool who said, <b><i>\"Quit while you're ahead\"</i></b>?"
+ar[358]="How do you know when <u>it</u> <i>is</i> time to tune your bagpipes?"
+ar[359]="<i>If</i> someone with <i>multiple personalities</i> robs a <b>bank</b>, who <i>is</i> charged with the crime?"
+ar[360]="<b>\"<i>Corn</i> oil\"</b> <i>is</i> made from <i><b>corn</b></i>, <i>\"<b>Olive</b> oil\"</i> is made from <i><b>olives</b></i>, so what does <b>baby</b> <i>oil</i> come from?"
+ar[361]="How can there <b>be</b> <i>self-help</i> <u>groups</u>?"
+ar[362]="<i>If</i> the land <u>is</u> <i>free</i>, why <i>is</i> someone always trying to sell me something?"
+ar[363]="Why are movie theatres always so cold? "
+ar[364]="<i>If</i> <b>\"fire fighters\"</b> <i>fight</i> \"<b><i>fires</i></b>\" and <i>\"crime fighters\"</i> fight \"<b>crime</b>\", what do <b><i>\"freedom fighters\"</i></b> <b>fight</b>? "
+ar[365]="Why do you often see a shoe lying on the side of the street? "
+ar[366]="Why do we pay tolls on the freeway?"
+ar[367]="Why do <b>banks</b> charge you a <b>\"non-sufficient funds\" <i>fee</i></b> on money they already know you <b>don't <i>have</i></b>? "
+ar[368]="Does the <i>\"reverse side\"</i> also have a <b>\"reverse\"</b> side?"
+ar[369]="Do you think the \"<u><b>Assassination Museum</b></u>\" was created after JFK's assassination?"
+ar[370]="Where do forest rangers go to get away from <i>it</i> all? "
+ar[371]="Why <i>is</i> a \"<b>black <i>light</i></b>\" not \"<u>black</u>\"? "
+ar[372]="Why <i>is</i> <u>it</u> when a \"<i>door</i>\" is <b>\"open\"</b> it's \"<u><b><i>ajar</i></b></u>\" but when a \"<b>jar</b>\" <i>is</i> \"<u>open</u>\" <i>it isn't</i> <b>\"adoor\"</b>? "
+ar[373]="Why do they call a \"<i>pear</i>\" a <b>'pear'</b> <i>if</i> there <i>is</i> only <u>one</u>? "
+ar[374]="Why <i>is</i> <u>it</u> called a Caesar's salad? Did he \"<i>invent</i>\" <u>it</u>? "
+ar[375]="<b>If</b> <u>it</u> <i>is</i> tourist season, why can't we shoot them?"
+ar[376]="Since <i>light</i> travels <b>faster</b> than <u>sound</u>, <i>isn't</i> that why <i>some</i> people \"appear\" <b>bright</b>, <u>until</u> you hear them speak? "
+ar[377]="Do <b>blind</b> Eskimos have <i>\"Seeing-Eye\" <b>sled dogs</b></i>?"
+ar[378]="<i>If</i> someone invented <i>\"instant\" <b>water</b></i>, what would they mix it <i>with</i>? "
+ar[379]="Why do <b>old</b> men wear their pants <i>higher</i> than <b>young</b> men do? "
+ar[380]="<i>If</i> you're <b>born</b> again do you have two <b>belly buttons</b>? "
+ar[381]="Why do they say \"<b><i><u>New and Improved</u></i></b>\"? <i>It</i> can't be \"<i><u>New</u></i>\" <u>if</u> <i>it</i> was \"<b><u>Improved</u></b>\" can <i>it</i>?"
+ar[382]="Why did <i>kamikaze</i> pilots wear helmets? "
+ar[383]="<i>If</i> you <b>choke</b> a <i>Smurf</i> what color would <i>it</i> turn? "
+ar[384]="How does the guy who runs the snowplow get to work <i>in</i> the morning?"
+ar[385]="Why do we <u>\"drive\"</u> on <b>\"parkways\"</b> and <i>\"park\"</i> on <i><b>\"driveways\"</b></i>? "
+ar[386]="<i>If</i> you got <i>into</i> a taxi, and the driver started driving <b>backwards</b>, would the taxi driver end up owing <u>you</u> money? "
+ar[387]="How do they get deer to cross <i>at</i> the yellow sign?"
+ar[388]="Why do we wait until a pig <i>is</i> <b>dead</b> to <i>\"cure\"</i> <i>it</i>? "
+ar[389]="How much money, <i>in pennies</i>, <i>is</i> lying on the streets of the world?"
+ar[390]="Why do <i>women</i> wear such uncomfortable shoes? "
+ar[391]="Why does the <i>Indiana</i> <b>Driver's License</b> include <i>in</i> its list of possible restrictions: <b>\"B\" for \"Blind\"</b>?"
+ar[392]="<i>If</i> a turtle doesn't have a shell, <i>is</i> he homeless, or <i>is</i> he naked? "
+ar[393]="Why <i>is it</i> called a <i>\"foot<b>ball</b>\"</i> when you really don't use your <b>feet</b> at all? "
+ar[394]="Why does the <i>psychic</i> hotline ask for your credit card number? Shouldn't they already <b>know</b> <i>it</i>? "
+ar[395]="Why do \"<b>fat</b> chance\" and \"<i>slim</i> chance\" mean the <u>same</u> thing? "
+ar[396]="<i>Isn't</i> the best way to <u>save</u> face to keep the <i>lower</i> part <b>shut</b>? "
+ar[397]="Do <i>vegetarians</i> eat <b>animal</b> crackers?"
+ar[398]="How does Elmo hear? Elmo has no ears?"
+ar[399]="Why are there <b>\"<i>Interstate</i> Highways\"</b> <u>in</u> <i>Hawaii</i>? "
+ar[400]="Did <b>Washington</b> just flash a <i>quarter</i> for his <u>ID</u>?"
+ar[401]="Why <i>is</i> <u>it</u> that when you tell a person that there are 400 <b>billion</b> stars <i>in</i> the sky, he'll <b>believe</b> you, but when you tell him that a <b>bench</b> <i>is</i> wet, he has to touch <u>it</u> to <b>believe</b> you? "
+ar[402]="<i>If</i> a tree falls <i>in</i> the forest, and no one <i>is</i> around to see <i>it</i>, do the other trees make fun of <i>it</i>? "
+ar[403]="<i>Is</i> the grass really <i>greener</i> on the <b>other</b> side? "
+ar[404]="Why <i>is</i> there only <b>ONE</b> <u><b>\"Monopolies Commission\"</b></u>? "
+ar[405]="Why <i>is</i> an \"<i>orange</i>\" an '<b>orange</b>' but an \"<b>apple</b>\" not a '<i>red</i>'? "
+ar[406]="<i>If</i> there <i>is</i> no <i>\"God\"</i>, who pops up the next <b>\"Kleenex\"</b> <i>in</i> the <b>box</b>? "
+ar[407]="<i>Is</i> the glass \"<b>half full</b>\" or '<i>half empty</i>'?"
+ar[408]="<i>If</i> you set to work with a knife that <i>will</i> cut through <u>anything</u>, and a Tupperware that's guaranteed not to <b>break</b>, what happens?"
+ar[409]="How do <i>I</i> set my <b>laser</b> printer on <i>stun gun</i>?"
+ar[410]="Why do people look <b>up</b> when they think?"
+ar[411]="Why do we tie shoes to the <b>back</b> of newlywed's cars? "
+ar[412]="Why <b>don't</b> <u>we</u> get <i>dizzy</i> from the world spinning <i>so</i> fast? "
+ar[413]="<u>Is</u> <i>it</i> possible to be <i>totally</i> partial? "
+ar[414]="If <b>blind</b> people wear sunglasses, why don't deaf people wear ear muffs? "
+ar[415]="Does a fish get cramps after eating?"
+ar[416]="What are preparations <b><i>A-G</i></b>? "
+ar[417]="Why does <i>it</i> start to sound really strange when you say the name of a color many times? "
+ar[418]="Do <b>\"infants\"</b> have as much fun <i>in</i> their \"<i>infancy</i>\" as <i>adults</i> do <i>in</i> their \"<b>adultery</b>\"?"
+ar[419]="What happened to the first <b><i>6 \"ups\"</i></b>?"
+ar[420]="Why do doughnuts have holes? "
+ar[421]="Do cemetery workers prefer the \"<i>graveyard</i>\" shift?"
+ar[422]="<i>If</i> you throw your pet cat out the window of your car, does <i>it</i> <b>become</b> <i>cat litter</i>? "
+ar[423]="Why are cigarettes sold at gas stations, <i>if</i> smoking <i>is</i> prohibited there? "
+ar[424]="Why are cows milked from the right side? "
+ar[425]="Why <i>is</i> <u>it</u> called a <b>building</b>, when <i>it's</i> already <b>built</b>? "
+ar[426]="Why isn't <b>\"phonic\"</b> spelled the way it <i>sounds</i>? "
+ar[427]="Can \"<b>fat</b>\" people go <i>'skinny-dipping'</i>?"
+ar[428]="Why do we <b>\"play\"</b> in <i>'recitals'</i> and <i>'recite'</i> in <b>\"plays\"</b>? "
+ar[429]="How does the <i>Cheshire Cat</i> only show his smile?"
+ar[430]="Why did <i>\"God\"</i> give <b>men</b> nipples? "
+ar[431]="<i>Isn't</i> a <b>Big Kid</b> an oxymoron?"
+ar[432]="<i>If</i> trailer parks didn't exist, would tornadoes exist? "
+ar[433]="Why do they call them <b>\"straight jackets\"</b> when they are never \"<i>straight</i>\"?"
+ar[434]="Why do we have to dry raincoats? "
+ar[435]="Why <i>isn't</i> <b>\"palindrome\"</b> spelled the same way <b>backwards</b>? "
+ar[436]="<i>If</i> man evolved from monkeys and apes, why do we still have monkeys and apes? "
+ar[437]="Why do we have a <i>\"hot water heater\"</i> when we don't need to \"<b>heat hot water</b>\"? "
+ar[438]="Just <b>before</b> someone gets nervous, do they experience cocoons <i>in</i> their stomachs?"
+ar[439]="Does chewing gum \"lose\" <i>its</i> flavor on the <b>bed</b> post \"overnight\"?"
+ar[440]="Can <i>your</i> <u>face</u> <i>actually</i> \"freeze\" while making \"<b>ugly</b>\" <i>faces</i>?"
+ar[441]="Why do steam <i>irons</i> have a permanent press setting? "
+ar[442]="Why do we <i>itch</i>? "
+ar[443]="Why do phone companies give you a number to call <i>if</i> your phone <i>doesn't</i> work?"
+ar[444]="Would a fly without wings be called a <i>\"walk\"</i>? "
+ar[445]="When <i>I</i> erase a word with a pencil where does <i>it</i> go? "
+ar[446]="How come you press harder on a remote, when you know the <b>battery</b> <i>is</i> dead?"
+ar[447]="Why <i>isn't</i> there <b>\"mouse flavored\"</b> cat food? "
+ar[448]="Why are they called <b>apartments</b> when they are stuck together? "
+ar[449]="Why are most homes <i>white</i>? "
+ar[450]="If the universe <i>is</i> everything, and scientists say that the universe <i>is</i> <b>expanding</b>, where <i>is</i> <u>it</u> expanding <b>into</b>? "
+ar[451]="Why <i>don't</i> we get <u>\"goosebumps\"</u> on our face? "
+ar[452]="Why do <b>\"brown eyes\"</b> see better <i>in</i> the sun than '<i>blue eyes</i>'? "
+ar[453]="Why does an alarm clock <i>\"go off\"</i> when <i>it</i> <b>BEGINS</b> ringing? "
+ar[454]="Why goes glass eventually get <b>thicker</b> towards the <b>bottom</b>?"
+ar[455]="Why <i>is</i> <u>'Jack'</u> a nickname for <b>\"John\"</b>? "
+ar[456]="Why can't we make newspapers that <u>don't</u> <i>smudge</i>? "
+ar[457]="Who really took the <i>bite</i> out of the <b>Apple</b> logo? "
+ar[458]="If the <b>#2</b> <u>pencil</u> is <i>so</i> popular, why <i>is</i> <u>it</u> still <i>#2</i>? "
+ar[459]="How <u>is</u> <i>it</i> possible to have a '<i>civil</i>' \"<b>war</b>\"?"
+ar[460]="Why do Roman paramedics refer to <i>IV's</i> as \"4's\"?"
+ar[461]="Will wearing <i>short-sleeve</i> shirts show your support for the <b>Right to Bare Arms</b>? "
+ar[462]="Why do some ranchers put old <b>boots</b> on fence posts? "
+ar[463]="Where do they get that <i>awful</i> music for <i>ice-skating</i>? "
+ar[464]="If a person <b>kills</b> their <i>clone</i>, <i>is</i> <u>it</u> <b>murder</b> or <i>suicide</i>?"
+ar[465]="Why are they called <b>stands</b>, when they are made for sitting? "
+ar[466]="<i>If</i> a <b>book</b> <i>about</i> <u>failures</u> <b>doesn't</b> <u>sell,</u> is <i>it</i> a <b>success</b>? "
+ar[467]="Whose cruel idea was <i>it</i> for the word <i>'lisp'</i> to have an <b>\"s\"</b> <u>in</u> <i>it</i>? "
+ar[468]="<u>If</u> <i>vegetarians</i> eat <i>vegetables</i>, what do <u><b>humanitarians</b></u> eat? "
+ar[469]="How do you tell <i>when</i> you are out of <i>invisible</i> <b>ink</b>?"
+ar[470]="How does one <i>actually</i> <u>zip</u> <i>their</i> <b>lip</b>?"
+ar[471]="When an elevator <i>is</i> <b>overloaded</b> <i>with</i> <u>passengers</u>, who <i>is</i> criminally responsible? "
+ar[472]="<i>If</i> the entire world <i>is</i> a stage, where <i>is</i> the audience sitting? "
+ar[473]="When sign makers go on strike, <i>is</i> there <i>anything</i> written on their signs? "
+ar[474]="Why are toilet flush handles on the left side? "
+ar[475]="Why do other people hear our voices different than we do? "
+ar[476]="How does <b>Kraft</b> get the 5 ounces into every slice of <i>\"American Singles\"</i>?"
+ar[477]="How come <b>Superman</b> can <u>stop <b>bullets</b></u> with <i>his</i> <b>chest</b>, <u>but</u> he <i>always</i> <u>ducks</u> when someone throws a gun at him?"
+ar[478]="Do <u>hungry</u> <i>crows</i> have <i>ravenous</i> appetites?"
+ar[479]="Why <i>is</i> <u>it</u> that when you are driving, and looking for an address, you turn the radio <u>down</u>? "
+ar[480]="Why are there <b>flotation devices</b> <u>under</u> plane seats <i>instead</i> of parachutes? "
+ar[481]="If you're <i>cross-eyed</i>, <u>and</u> have <b>dyslexia</b> can you read normally? "
+ar[482]="If <i>someone</i> <u>with</u> <b>multiple personalities</b> <i>threatens</i> <u>to</u> <b>kill</b> <i>himself</i>, <i>is</i> <b>it</b> <i>considered</i> a <u>hostage <i>situation</i></u> or a <b>murder</b>? "
+ar[483]="Why <u>is</u> <i>it</i> that when you see someone <i>in</i> a cast or a <b>brace</b>, you say <b>\"Ouch!\"</b>?"
+ar[484]="<i>If</i> <u>it</u> <i>is</i> <u><b>zero degrees outside today</b></u>, and <u>it</u> <i>is</i> supposed to be <u>twice</u> as cold <u>tomorrow</u>, how cold <i>is</i> <b>it</b> <u>going</u> <i>to</i> <b>be</b>? "
+ar[485]="What do you plant to grow a <i>seedless</i> watermelon?"
+ar[486]="What was the reason \"<i>God</i>\" gave us a shin? <i>Is</i> <u>it</u> only so we could find things <i>in</i> the dark? "
+ar[487]="Why are there <b>5</b> syllables <i>in</i> the word <i><b>\"monosyllabic\"</b></i>? "
+ar[488]="Where are the germs that cause <i>good</i> <b>breath</b>? "
+ar[489]="Why does <i>unscented</i> hairspray \"<b>smell</b>\"? "
+ar[490]="What <i>is</i> <u>Mother Goose's</u> <i>real</i> first name? "
+ar[491]="<i>If</i> one synchronized swimmer <b>drowns</b>, do the rest <i>have</i> to drown <i>too</i>? "
+ar[492]="Why do the minute hands on school clocks always click <b>\"backwards\"</b> <i>before</i> \"advancing\"? "
+ar[493]="<i>If</i> a <i>stealth</i> <b>bomber</b> crashes <i>in</i> a forest, will <i>it</i> make a sound? "
+ar[494]="Why do your feet <b>swell</b> on airplanes? "
+ar[495]="<i>If</i> <b>\"pro\"</b> is the opposite of '<i>con</i>', <i>is</i> <b>\"progress\"</b> the opposite of <i>'Congress'</i>? "
+ar[496]="Shouldn't there be a shorter word for <b>\"monosyllabic\"</b>? "
+ar[497]="<i>If</i> white wine goes with fish, do white grapes go with sushi? "
+ar[498]="Before they <i>invented</i> drawing <b>boards</b>, what did they go <b>back</b> to?"
+ar[499]="Why do scientists call it <i>research</i>, when they are looking for something \"new\"? "
+ar[500]="<i>If</i> nothing <i>ever</i> sticks to Teflon, how can they get Teflon to stick to the pan? "
+ar[501]="Are there <b>\"Seeing-Eye\"</b> <i>humans</i> for <u>blind</u> dogs?"
+ar[502]="How come you never hear about <b>\"gruntled\"</b> employees?"
+ar[503]="Why don't more '<i>psychics</i>' win the lottery? "
+ar[504]="How many licks does it <i>really</i> take to get to the center of a <b>\"Tootsie Pop\"</b>? "
+ar[505]="How do they unclog mail chutes <i>in</i> skyscrapers?"
+ar[506]="<i>If I</i> break the <b>\"Laws of Physics\"</b> do <i>I</i> go to jail?"
+ar[507]="What <i>is</i> the purpose of the red string on \"<b>Band-Aid</b>\" brand adhesive packages? "
+ar[508]="What causes the holes <i>in</i> \"<i>Swiss</i>\" cheese? "
+ar[509]="Why <u>is</u> <i>it</i> that when you transport something by <i>'car'</i> <u>it</u> <i>is</i> called a <b>\"shipment\"</b> but when you transport something by <b>\"ship\"</b> <u>it</u> <i>is</i> called <i>'cargo'</i>? "
+ar[510]="Do they have reserved parking for <i>non-handicapped</i> people at the \"<b>Special Olympics</b>\"?"
+ar[511]="Why <i>is</i> the alphabet <u>in</u> <i>that</i> order? <i>Is</i> <u>it</u> because of <i>that</i> \"song\"? "
+ar[512]="Why <i>is</i> there an expiration date on <b>SOUR</b> cream? "
+ar[513]="What was the <b>best</b> thing <b>before</b> <i>sliced <b>bread</b></i>? "
+ar[514]="Why <u>is</u> <i>it</i> when two planes almost hit each other <i>it</i> <u>is</u> called a near miss? Shouldn't <i>it</i> be called a near hit? "
+ar[515]="Why can't you find fresh sardines <i>in</i> a fish market? "
+ar[516]="Which fruits are <u>in</u> <i>\"Juicy Fruit\"</i>? "
+ar[517]="<i>If</i> you can't drink and drive, why do you need a driver's license to <b>buy</b> liquor, and why do <b>bars</b> have parking lots? "
+ar[518]="<i>If</i> you don't repair your brakes right away, should you make your horn louder? "
+ar[519]="How many turtles <i>does</i> <u>it</u> take to make one can of <i>\"Turtle Wax\"</i>? "
+ar[520]="Why are jeans so hard to fit <i>into</i>? "
+ar[521]="What do <i>little</i> <b>birdies</b> see <i>if</i> they get knocked unconscious? "
+ar[522]="Why aren't there seat <b>belts</b> <i>in</i> <b>buses</b> and taxicabs? "
+ar[523]="<i>Isn't</i> <u>it</u> a bit unnerving that doctors call what they do <i>\"practice\"</i>?"
+ar[524]="Why do they call <i>it</i> the <b>\"Department of <i>Interior</i>\"</b> when they are <i>in</i> charge of everything outdoors? "
+ar[525]="Why <i>is</i> yawning contagious? "
+ar[526]="Why do we sing <i>\"Take Me Out To the Ball Game\"</i> if we <i>are</i> already there? "
+ar[527]="Why do we buy a product that takes \"2000 Flushes\" to get rid of? "
+ar[528]="<i>If</i> taught, do gorillas <i>really</i> understand <i>sign language</i>? "
+ar[529]="Why <i>is</i> toilet paper scented? "
+ar[530]="Why doesn't <b>Tarzan</b> have a <b>beard</b>? "
+ar[531]="Why don't penguins in Antarctica <i>ever</i> <u>get</u> frost<b>bite</b>? "
+ar[532]="Do <b>boxer</b> shorts <b>box</b>?"
+ar[533]="How much deeper would the ocean <b>be</b> <i>if</i> sponges didn't grow <i>in</i> <u>it</u>? "
+ar[534]="Have you ever <i>imagined</i> a world with <u>no</u> hypothetical situations?"
+ar[535]="Why does soda taste better in a <i>small bottle</i> than in a <b>large bottle</b> or in a <u>can</u>? "
+ar[536]="<i>If</i> a mute swears, <i>does</i> his mother wash his hands with soap? "
+ar[537]="What do you do when you see an <b>endangered animal</b>, that is eating an <b>endangered plant</b>? "
+ar[538]="<i>If</i> you have an \"open mind\", is there a chance your <b>brain</b> might \"fall out\"? "
+ar[539]="<i>Is</i> there another word for synonym? "
+ar[540]="Why does <b>\"X\"</b> stand for \"<b>kiss</b>\" and <i>'O'</i> stand for <i>'hugs'</i>? "
+ar[541]="Where does the lost sock <i>in</i> the washer and dryer go? "
+ar[542]="Does \"<i>fuzzy</i>\" logic '<b>tickle</b>'?"
+ar[543]="Why do bananas grow upward, and all other fruits grow downward? "
+ar[544]="Where do swear words come from? "
+ar[545]="Why doesn't <i>\"onomatopoeia\"</i> sound like what <u>it</u> <i>is</i>? "
+ar[546]="Why do people who know the least know <i>it</i> the loudest? "
+ar[547]="Why do <i>psychics</i> have to ask for your name? "
+ar[548]="<i>If</i> the speed of light <i>is</i> 186,000 miles per second, then what <i>is</i> the speed of dark? "
+ar[549]="Why doesn't glue <i>stick</i> to the <i>inside</i> of the <b>bottle</b>? "
+ar[550]="How do they get the cream <i>in</i> the Twinkie?"
+ar[551]="Why do '<i>Corn Flakes</i>' and <b>\"Sugar Frosted Flakes\"</b> have the same number of calories per serving? "
+ar[552]="Why does <i>'slow down'</i> and <b>\"slow up\"</b> mean the same thing? "
+ar[553]="What does the <i>\"Q\"</i> in <i>\"Q-tip\"</i> stand for?"
+ar[554]="Why are elections held on <i>Tuesdays</i>? "
+ar[555]="<i>Instead</i> of talking to your plants, <i>if</i> you <b>yelled</b> at them would they still grow? Only to be troubled and <i>insecure</i>? "
+ar[556]="What happens when none of your <b>bees</b> wax? "
+ar[557]="Why do they sterilize the needles for lethal <i>injections</i>? "
+ar[558]="Do little angels have car seats <i>in</i> their chariots <i>in</i> heaven?"
+ar[559]="What's <i>another word</i> for <i>\"thesaurus\"</i>? "
+ar[560]="Why are school buses painted <i>yellow</i>? "
+ar[561]="What does <i><b>Geronimo</b></i> yell when he jumps out of a plane? "
+ar[562] = "<b>Time <i>is</i> of the essence!</b> <i><u>Comb your hair.</u></i>";
+ar[563] = "Sanity <i>is</i> a <u>golden apple</u> with <b>no</b> <i>shoelaces</i>.";
+ar[564] = "<b>Repent! The end <i>is</i> coming, <i>$9.95</i> at <u>Amazon</u>.</b>";
+ar[565] = "\"Honesty\" blurts where deception sneezes.";
+ar[566] = "Pastry <i>\"satisfies\"</i> where art <i>is</i> unavailable.";
+ar[567] = "<i><b>Delete</b> <u>not</u>, lest <u>you</u>, too, be <b>deleted</b>.</i>";
+ar[568] = "<b>O! Youth!</b> What a pain <i>in</i> the <b>backside</b>.";
+ar[569] = "\"Wishes\" are like \"goldfish\" <i>with</i> \"propellers\".";
+ar[570] = "<i>Love</i> the river's <b><i>\"beauty\"</i></b>, <b>but</b> \"live\" on a hill.";
+ar[571] = "\"Invention\" <i>is</i> the <u>\"mother\"</u> of <b>\"too many\"</b> <i>\"useless toys\"</i>.";
+// The random number generator.
+
+function rand(n) {
+seed = (0x015a4e35 * seed) % 0x7fffffff;
+return (seed >> 16) % n;
+}
+        
+var now = new Date()
+var seed = now.getTime() % 0xffffffff
+
+</script>
+<script language="JavaScript" type="text/javascript">
+
+<!-- 
+
+// Author:Brandon Checketts
+
+// Homepage: http://www.apeleon.net/~microbit/brandon.html
+
+// Email: Brandon@microbits.com
+
+// For this script and more, visit http://wsabstract.com
+
+
+
+numQuotes=572;
+
+ar2 = new Array(numQuotes);
+
+ar2[0] = "Everything will now come your way.";
+ar2[1] = "Now is the time to try something new."
+ar2[2] = "A \"handful\" of \"patience\" is worth \"more\" than a \"bushel\" of \"brains\"."
+ar2[3] = "You have an active mind and a keen imagination."
+ar2[4] = "Don't let doubt and suspicion bar your progress."
+ar2[5] = "You will make a fortune with your friend."
+ar2[6] = "Your emotional nature is strong and sensitive."
+ar2[7] = "You will find a treasure at this web site."
+ar2[8] = "Sing and rejoice, fortune is smiling on you."
+ar2[9] = "You have remarkable power which you are not using."
+ar2[10] = "Your venture will be a success."
+ar2[11] = "Accept the next proposition you hear."
+ar2[12] = "A cheerful letter or message is on its way to you."
+ar2[13] = "You are just beginning to \"live\"."
+ar2[14] = "Love is a roller coaster, it has its \"ups\" and \"downs\"."
+ar2[15] = "You will find a treasure at this web site."
+ar2[16] = "The great joy in life is doing what people say you cannot do."
+ar2[17] = "You are a bundle of energy, always on the go."
+ar2[18] = "Your dearest wish will come true."
+ar2[19] = "You have at your command the wisdom of the ages."
+ar2[20] = "You will travel to many places."
+ar2[21] = "You are careful & systematic in your business arrangements."
+ar2[22] = "To one who waits, a \"moment\" seems a \"year\"."
+ar2[23] = "Your wisdom has kept you far away from danger."
+ar2[24] = "You will have a fine capacity for the enjoyment of life."
+ar2[25] = "You will reach the height of success in whatever you do."
+ar2[26] = "\"Consolidate\" rather than \"expand\" your business in the near future."
+ar2[27] = "Your principles mean more to you than any money or success."
+ar2[28] = "You have a deep appreciation of the arts and music."
+ar2[29] = "You display the wonderful traits of charm and courtesy."
+ar2[30] = "You are talented in many ways."
+ar2[31] = "Good fortune awaits you at the end of the day."
+ar2[32] = "Treat everyone as a friend."
+ar2[33] = "You are the guiding star of his existence."
+ar2[34] = "You are open and honest in your philosophy of love."
+ar2[35] = "Simplicity should be your theme in dress."
+ar2[36] = "You will be fortunate in the opportunities presented to you."
+ar2[37] = "You can open doors with your charm and patience."
+ar2[38] = "Your talents will be recognized and suitably rewarded."
+ar2[39] = "Don't be hasty, prosperity will knock on your door soon."
+ar2[40]='There are some people who live in a dream world, and there are some who face reality; and then there are those who turn one into the other. -By Douglas Everett'
+ar2[41]='Whether you think you can or whether you think you can\'t, you\'re right! -Henry Ford'
+ar2[42]='I know of no more encouraging fact than the unquestionable ability of man to elevate his life by conscious endeavor. -Henry David Thoreau'
+ar2[43]='Do not let what you cannot do interfere with what you can do. -John Wooden'
+ar2[44]='Accept everything about yourself - I mean everything, You are you and that is the beginning and the end - no apologies, no regrets. -Clark Moustakas'
+ar2[45]='We must accept life for what it actually is - a challenge to our quality without which we should never know of what stuff we are made, or grow to our full stature. -Ida R. Wylie'
+ar2[46]='High achievement always takes place in the framework of high expectation. -Jack Kinder'
+ar2[47]='The measure of a man is the way he bears up under misfortune. -Plutarch'
+ar2[48]='Don\'t wait for your ship to come in, swim out to it. -Anon'
+ar2[49]='As I grow older, I pay less attention to what men say. I just watch what they do. -Andrew Carnegie'
+ar2[50]='No steam or gas ever drives anything until it is confined. No Niagara is ever turned into light and power until it is tunneled. No life ever grows until it is focused, dedicated, disciplined. -Harry Emerson Fosdick'
+ar2[51]='The words printed here are concepts. You must go through the experiences. -Carl Frederick'
+ar2[52]='Man cannot discover new oceans unless he has the courage to lose sight of the shore. -Andre Gide'
+ar2[53]='The wise man does at once what the fool does finally. -Baltasar Gracian'
+ar2[54]='The world has the habit of making room for the man whose actions show that he knows where he is going. -Napoleon Hill'
+ar2[55]='Success seems to be connected with action. Successful men keep moving. They make mistakes, but they don\'t quit. -Conrad Hilton'
+ar2[56]='Do the things you know, and you shall learn the truth you need to know. -George Macdonald'
+ar2[57]='I have never heard anything about the resolutions of the apostles, but a good deal about their acts. -Horace Mann'
+ar2[58]='Let us not be content to wait and see what will happen, but give us the determination to make the right things happen. -Peter Marshall'
+ar2[59]='I hear and I forget, I see and I remember. I do and I understand. -Chinese Proverb'
+ar2[60]='One may walk over the highest mountain one step at a time. -John Wanamaker'
+ar2[61]='Every action is either strong or weak, and when every action is strong we are successful. -Wallace D. Wattles'
+ar2[62]='If we do what is necessary, all the odds are in our favor. -Henry Kissinger'
+ar2[63]='Little minds are tamed and subdued by misfortune; but great minds rise above them. -Washington Irving'
+ar2[64]='When an affliction happens to you, you either let it defeat you, or you defeat it... -Rosalind Russell'
+ar2[65]='There\'s a basic human weakness inherent in all people which tempts them to want what they can\'t have and not want what is readily available to them. -Robert J. Ringer'
+ar2[66]='If there is something to gain and nothing to lose by asking, by all means ask! -W. Clement Stone'
+ar2[67]='It\'s not the situation ... It\'s your reaction to the situation -Robert Conklin'
+ar2[68]='Life at any time can become difficult: life at any time can become easy.  It all depends upon how one adjusts oneself to life. -Morarji Desai'
+ar2[69]='What happens is not as important as how you react to what happens. -Thaddeus Golas'
+ar2[70]='To hell with circumstances; I create opportunities. -Bruce Lee'
+ar2[71] = "Nothing is as easy as it looks."
+ar2[72] = "Everything takes longer than you think."
+ar2[73] = "Anything that can go wrong will go wrong."
+ar2[74] = "If there is a possibility of several things going wrong, the one that will cause the most damage will be the one to go wrong."
+ar2[75] = "If there is a worse time for something to go wrong, it will happen then."
+ar2[76] = "If anything simply cannot go wrong, it will anyway."
+ar2[77] = "If you perceive that there are four possible ways in which a procedure can go wrong, and circumvent these, then a fifth way, unprepared for, will promptly develop."
+ar2[78] = "Left to themselves, things tend to go from bad to worse."
+ar2[79] = "If everything seems to be going well, you have obviously overlooked something."
+ar2[80] = "Nature always sides with the hidden flaw."
+ar2[81] = "Mother nature is a bitch."
+ar2[82] = "It is impossible to make anything foolproof because fools are so ingenious."
+ar2[83] = "Whenever you set out to do something, something else must be done first."
+ar2[84] = "Every solution breeds new problems."
+ar2[85] = "Trust everybody ... then cut the cards."
+ar2[86] = "Two wrongs are only the beginning."
+ar2[87] = "If at first you don't succeed, destroy all evidence that you tried."
+ar2[88] = "To succeed in politics, it is often necessary to rise above your principles."
+ar2[89] = "Exceptions prove the rule ... and wreck the budget."
+ar2[90] = "Success always occurs in private, and failure in full view."
+ar2[91]="\"Warning:\" Dates in Calendar are closer than they appear.";
+ar2[92]="Daddy, why doesn't this magnet pick up this floppy disk?"
+ar2[93]="Give me ambiguity or give me something else."
+ar2[94]="\"I.R.S.:\" We've got what it takes to take what you've got!"
+ar2[95]="We are born naked, wet and hungry.  Then things get \"worse\"."
+ar2[96]="Pentiums melt in your PC, not in your hand."
+ar2[97]="\"Suicidal twin kills sister by mistake!\"" 
+ar2[98]="Did anyone \"see\" my \"lost\" carrier?"
+ar2[99]="Make it \"idiot proof\" and someone will make a \"better idiot\"."
+ar2[100]="I'm not a complete idiot, \"some\" parts are missing!"
+ar2[101]="He who laughs last thinks slowest!"
+ar2[102]="Always remember you're unique, just like everyone else."
+ar2[103]="\"Save\" the whales, collect the whole set"
+ar2[104]="A flashlight is a case for holding \"dead\" batteries."
+ar2[105]="\"Lottery:\" A tax on people who are bad at math."
+ar2[106]="There's too much blood in my caffeine system."
+ar2[107]="\"Artificial\" \"Intelligence\" usually beats \"real\" \"stupidity\"."
+ar2[108]="Hard work has a future payoff.  Laziness pays off now."
+ar2[109]="\"Friends\" help you move. \"Real\" \"friends\" help you move bodies."
+ar2[110]="I won't rise to the occasion, but I'll slide over to it."
+ar2[111]="Ever notice how fast Windows runs?  Neither did I."
+ar2[112]="Double your drive space - delete Windows!"
+ar2[113]="What is a free gift? Aren't all gifts free?"
+ar2[114]="If ignorance is bliss, you must be orgasmic."
+ar2[115]="Very funny, Scotty. Now beam down my clothes."
+ar2[116]="\"Puritanism:\" The \"haunting\" fear that someone, somewhere may be \"happy\"."
+ar2[117]="\"Consciousness:\" that annoying time between naps."
+ar2[118]="Oops. My brain just hit a \"bad sector\"."
+ar2[119]="I used to have a \"handle\" on \"life\", then it \"broke\"."
+ar2[120]="Don't take \"life\" too seriously, you won't get out alive."
+ar2[121]="I don't suffer from insanity.  I enjoy every minute of it."
+ar2[122]="A pedestrian hit me and went under my car."
+ar2[123]="Better to understand a little than to misunderstand a lot."
+ar2[124]="The \"gene pool\" could use a little \"chlorine\"."
+ar2[125]="When there's a will, I want to be in it."
+ar2[126]="Okay, who put a \"stop payment\" on my \"reality check\"?"
+ar2[127]="Few women admit their age.  Few men act theirs."
+ar2[128]="I'm as confused as a baby in a topless bar."
+ar2[129]="We have enough \"youth\", how about a fountain of \"SMART\"?"
+ar2[130]="All generalizations are false, including this one."
+ar2[131]="Change is inevitable, except from a vending machine."
+ar2[132]="\"C\" program run.  \"C\" program crash.  \"C\" programmer quit."
+ar2[133]="\"Criminal Lawyer\" is a redundancy."
+ar2[134]="\"640K ought to be enough for anybody. - Bill Gates 1981\""
+ar2[135]="90% of all statistics are made up."
+ar2[136]="A man needs a good memory after he has lied."
+ar2[137]="A little work, a little sleep, a little love and it is all over."
+ar2[138]="A lot of people mistake a short memory for a clear conscience."
+ar2[139]="\"Apple\" Copyright 6024 B.C., \"Adam & Eve\""
+ar2[140]="\"Apple Copyright 1767, \"Sir Isaac Newton\"."
+ar2[141]="\"Bad knee, gotta run.\" - Pat Buchanan to his draft board"
+ar2[142]="Beam me aboard, Scotty..... Sure. Will a \"2x10\" do?"
+ar2[143]="Beulah, peel me a grape."
+ar2[144]="Bother, said Pooh as the brakes went out!"
+ar2[145]="Build a watch in 179 easy steps - by C. Forsberg."
+ar2[146]="\"C++\" should have been called \"B\""
+ar2[147]="\"COINCIDENCE\" happens."
+ar2[148]="Calvin, we will not have an anatomically correct snowman!"
+ar2[149]="Careful.  We don't want to learn from this. -- \"Calvin\""
+ar2[150]="\"Energizer Bunny Arrested! Charged with battery.\""
+ar2[151]="\"Great spirits have always encountered violent opposition from mediocre minds.\"  -Albert Einstein";
+ar2[152]="\"Tis nobler to lose honor to save the lives of men than tis to gain honor by taking them.\"  -David Borenstein"
+ar2[153]="\"Freedom is that instant between when someone tells you to do something and when decide how to respond.\"  -Jeffery Borenstein"
+ar2[154]="\"To live a pure unselfish life, one must count nothing as one's own in the midst of abundance.\"  -Buddha"
+ar2[155]="\"We need more people who specialize in the impossible.\"  -Unknown"
+ar2[156]="\"It is not enough to have a good mind; the main thing is to use it well.\"  -Rene Descartes"
+ar2[157]="\"Fall seven times, stand up eight.\"  -Japanese Proverb" 
+ar2[158]="\"Every problem has a gift for you in its hands.\" -Richard Bach"
+ar2[159]="\"Enjoy life. There's plenty of time to be dead.\" -Unknown"
+ar2[160]="\"One's mind, once stretched by a new idea, never regain sits original dimensions.\"  -Oliver Wendel Holmes"
+ar2[161]="\"Nothing is so strong as gentleness and nothing is so gentle as real strength.\"  -Ralph W. Sockman"
+ar2[162]="\"Wisdom begins in wonder.\"  -Socrates"
+ar2[163]="\"Live out of your imagination, not your history.\" -Stephen Covey"
+ar2[164]="\"People only see what they are prepared to see.\" -Ralph Waldo Emerson"
+ar2[165]="\"Thinking: The talking of the soul with itself.\" -Plato"
+ar2[166]="\"Liberty means responsibility. That is why most men dread it.\"  -George Bernard Shaw"
+ar2[167]="\"The only thing necessary for the triumph of evil is for good men to do nothing.\"  -Edmund Burke"
+ar2[168]="\"To accomplish great things, we must not only act, but also dream; not only plan, but also believe.\"  -Anatole France"
+ar2[169]="\"You must do the things you think you cannot do.\" -Eleanor Roosevelt"
+ar2[170]="\"You get the best out of others when you give the best of yourself.\"  -Harry Firestone"
+ar2[171]="\"Real riches are the riches possessed inside.\"  -B. C. Forbes"
+ar2[172]="\"Choose your friends by their character and your socks by their color.  Choosing your socks by their character makes no sense, and choosing your friends by their color is unthinkable.\"  -Unknown"
+ar2[173]="\"You must be the change you wish to see in the world.\"  -Gandhi"
+ar2[174]="\"When you get to the end of your rope, tie a knot and hang on.\"  -Franklin D. Roosevelt"
+ar2[175]="\"What you do speaks so loudly that I cannot hear what you say.\"  -Ralph Waldo Emerson"
+ar2[176]="\"Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.\"  -Mark Twain"
+ar2[177]="\"Use what talent you possess: the woods would be very silent if no birds sang except those that sang best.\"  -Henry Van Dyke"
+ar2[178]="\"Where there is great love, there are always wishes.\"  -Willa Cather"
+ar2[179]="\"The supreme happiness in life is the conviction that we are loved.\"  -Victor Hugo"
+ar2[180]="\"You don't get harmony when everybody sings the same note.\"  -Doug Floyd"
+ar2[181]="\"When you are content to be simply yourself and don't compare or compete, everybody will respect you.\"  -Lao-Tzu"
+ar2[182]="\"Fear less, hope more; Whine less, breathe more; Talk less, say more; Hate less, love more; And all good things are yours.\"  -Swedish Proverb"
+ar2[183]="\"Learn from yesterday, live for today, hope for tomorrow.\"  -Unknown"
+ar2[184]="\"People are just as happy as they make up their minds to be\"  -Abraham Lincoln"
+ar2[185]="\"Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them.\"  -William Shakespeare"
+ar2[186]="\"Do what you can, with what you have, where you are.\" -Theodore Roosevelt"
+ar2[187]="\"He who dies with the most toys is, nonetheless, still dead.\"  -Unknown"
+ar2[188]="\"Be true to your work, your word, and your friend.\"  -Henry David Thoreau"
+ar2[189]="\"Without a struggle, there can be no progress.\" -Frederick Douglass"
+ar2[190]="\"Problems are only opportunities in work clothes.\"  -Henry Kaiser"
+ar2[191]="\"If you don't like something, change it. If you can't change it, change your attitude. Don't complain.\"  -Maya Angelou"
+ar2[192]="\"Dreams are the touchstones of our character.\"  -Henry David Thoreau"
+ar2[193]="\"Those who do not remember the past are condemned to repeat it.\"  -George Santayana"
+ar2[194]="\"May you live every day of your life.\"  -Jonathan Swift"
+ar2[195]="\"Without change, something sleeps inside us, and seldom awakens. The sleeper must awaken.\"  -Frank Herbert"
+ar2[196]="\"Every problem has a gift for you in its hands.\"  -Richard Bach"
+ar2[197]="\"An insincere and evil friend is more to be feared than a wild beast; a wild beast may wound your body, but an evil friend will wound your mind.\"  -Buddha"
+ar2[198]="\"Look at everything as though you were seeing it for the first time or the last time. Then your time on earth will be filled with glory.\"  -Betty Smith"
+ar2[199]="\"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.\"  -Buddha"
+ar2[200]="\"The Lord is my light, and my salvation; whom shall I fear?\"  -Psalm 27"
+ar2[201]="\"Don't be afraid to take a big step. You can't cross a chasm in two small jumps.\"  -David Lloyd George"
+ar2[202]="\"Tomorrow is a new day; you shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.\"  -Ralph Waldo Emerson"
+ar2[203]="\"Minds are like parachutes; they work best when open.\"  -Lord Thomas Dewar"
+ar2[204]="\"One thing you can't recycle is wasted time.\"  -Anonymous"
+ar2[205]="\"The purpose of life is a life of purpose.\"  -Robert Byrne"
+ar2[206]="\"It is good to have an end to journey toward, but it is the journey that matters in the end.\"  -Ursula K. LeGuin"
+ar2[207]="\"It is one of the most beautiful compensations of life, that no man can sincerely try to help another without helping himself.\"  -Ralph Waldo Emerson"
+ar2[208]="\"The question is not whether we will die, but how we will live.\"  -Joan Borysenko"
+ar2[209]="\"What lies behind us and what lies before us are tiny matters compared to what lies within us.\"  -Oliver Wendell Holmes"
+ar2[210]="\"We are what we repeatedly do. Excellence, then is not an act, but a habit.\"  -Aristotle"
+ar2[211]="\"There are no mistakes, no coincidences. All events are blessings given to us to learn from.\"  -Dr. Elisabeth Kubler-Ross"
+ar2[212]="\"It is only with the heart that one can see rightly; what is essential is invisible to the eye.\"  -Antoine De Saint-Exupery"
+ar2[213]="\"You live through the darkness from what you learned in the light.\"  -Hope MacDonald"
+ar2[214]="\"He who knows others is wise. He who knows himself is enlightened.\"  -Anonymous"
+ar2[215]="\"Never be bullied into silence. Never allow yourself to be made a victim. Accept no one's definition of your life; define yourself.\"  -Harvey Fierstein"
+ar2[216]="\"Darkness cannot drive out darkness; only light can dothat. Hate cannot drive out hate; only love can do that.\"  -Martin Luther King, Jr."
+ar2[217]="\"The important thing is not to stop questioning.\" -Albert Einstein"
+ar2[218]="\"In three words I can sum up everything I've learned about life: it goes on.\"  -Robert Frost"
+ar2[219]="\"The journey is the reward.\"  -Tao Saying"
+ar2[220]="\"Never look down on anybody unless you helping him up.\"  -Jesse Jackson"
+ar2[221]="\Knowing is not enough; we must apply. Willing is not enough; we must do.\"  -Goethe"
+ar2[222]="\"The less you open your heart to others, the more your heart suffers.\"  -Deepak Chopra"
+ar2[223]="\"There are no shortcuts to any place worth going.\" -Unknown"
+ar2[224]="\"I learned that it is the weak who are cruel, and that gentleness is to be expected only from the strong.\"  -Leo Rosten"
+ar2[225]="\"Looking back, I have this to regret, that too often when I loved, I did not say so.\"  -David Grayson"
+ar2[226]="\"He who angers you conquers you.\"  -Elizabeth Kenny"
+ar2[227]="\"Tell me who admires you and loves you, and I will tell you who you are.\"  -Charles Augustin Sainte-Beauve"
+ar2[228]="\"The last of the human freedoms is to choose one's attitudes.\"  -Victor Frank"
+ar2[229]="\"No bird soars too high if he soars with his own wings.\"  -William Blake"
+ar2[230]="\"Man is free at the moment he wishes to be.\"  -Voltaire"
+ar2[231]="\"We must use time wisely and forever realize that the time is always ripe to do right.\"  -Nelson Mendela"
+ar2[232]="\"Nurture your mind with great thoughts.\"  -Benjamin Disraeli"
+ar2[233]="\"Teachers open the door, but you must enter by yourself.\"  -Chinese Proverb"
+ar2[234]="\"If you find it in your heart to care for somebody else, you will have succeeded.\"  -Maya Angelou"
+ar2[235]="\"You, yourself, as much as anybody in the entire universe, deserve your love and affection.\"  -Buddha"
+ar2[236]="\"Shoot for the moon. Even if you miss, you'll land among the stars.\"  -Les Brown"
+ar2[237]="\"The only way to have a friend is to be one.\"  -Ralph Waldo Emerson"
+ar2[238]="\"This life is worth living, we can say, since it is what we make it.\"  -William James"
+ar2[239]="\"A friend is one who knows you and loves you just the same.\"  -Elbert Hubbard"
+ar2[240]="\"People who fight fire with fire usually end up with ashes.\"  -Abigail Van Buren"
+ar2[241]="\"Knowledge is power.\"  -Francis Bacon"
+ar2[242]="\"Nothing great was ever achieved without enthusiasm.\" -Ralph Waldo Emerson"
+ar2[243]="\"Every exit is an entry somewhere.\"  -Tom Stoppard"
+ar2[244]="\"It's always too early to quit.\"  -Norman Vincent Pearle"
+ar2[245]="\"A person who aims at nothing is sure to hit it.\"  -Anonymous"
+ar2[246]="\"A journey of a thousand miles begins with a single step.\"  -Confucius"
+ar2[247]="\"This above all; to thine own self be true.\"  -William Shakespeare"
+ar2[248]="\"Friends are treasures.\"  -Horace Bruns"
+ar2[249]="\"We never know the worth of water 'til the well is dry.\"  -English Proverb"
+ar2[250]="\"A thief believes everybody steals.\"  -E.W. Howe"
+ar2[251]="\"It takes a great man to be a good listener.\"  -Calvin Coolidge"
+ar2[252]="\"If you love something, let it go. If it comes back it's yours. If it doesn't, it never really was in the first place.\"  -Unknown"
+ar2[253]="\"It is a man's own mind, not his enemy or foe, that lures him to evil ways.\"  -Buddha"
+ar2[254]="\"Assumptions allow the best in life to pass you by.\"  -John Sales"
+ar2[255]="\"Live free or die.\"  -New Hampshire"
+ar2[256]="\"Fall seven times, stand up eight.\"  -Japanese Proverb"
+ar2[257]="\"Courage is not the absence of fear, but rather the judgement that something else is more important than fear.\"  -Ambrose Redmoon"
+ar2[258]="\"Live as if your were to die tomorrow. Learn as if you were to live forever.\"  -Gandhi"
+ar2[259]="\"Here is the test to find whether your mission on Earth is finished: if you're alive, it isn't.\"  -Richard Bach"
+ar2[260]="\"Fear is that little darkroom where negatives are developed.\"  -Michael Pritchard"
+ar2[261]="\"All life is an experiment.\"  -Ralph Waldo Emerson"
+ar2[262]="\"Men are born to succeed, not to fail.\"  -Henry David Thoreau"
+ar2[263]="\"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.\"  -Albert Einstein"
+ar2[264]="\"The sweetest of all sounds is praise.\"  -Xenophon"
+ar2[265]="\"Believe that life is worth living and your belief will help create the fact.\"  -William James"
+ar2[266]="\"The most wasted day of all is that during which we have not laughed.\"  -Sebastian R. N. Chamfort"
+ar2[267]="\"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has opened for us.\"  -Helen Keller"
+ar2[268]="\"Write the bad things that are done to you in sand, but write the good things that happen to you on a piece of marble.\"  -Arabic Parable"
+ar2[269]="\"The only real mistake is the one from which we learn nothing.\"  -John Powell"
+ar2[270]="\"You are never given a wish without also being given the power to make it come true. You may have to work for it, however.\"  -Richard Bach"
+ar2[271]="\"We can try to avoid making choices by doing nothing, but even that is a decision.\"  -Gary Collins"
+ar2[272]="\"A good head and a good heart are always a formidable combination.\"  -Nelson Mandela"
+ar2[273]="\"Eighty percent of success is showing up.\"  -Woody Allen"
+ar2[274]="\"The harder you work, the luckier you get.\"  -McAlexander"
+ar2[275]="\"No one can make you feel inferior without your consent.\"  -Eleanor Roosevelt"
+ar2[276]="\"The brighter you are, the more you have to learn.\"  -Don Herold"
+ar2[277]="\"Even if you are on the right track, you'll get run over if you just sit there.\"  -Will Rogers"
+ar2[278]="\"The expert at anything was once a beginner.\"  -Hayes"
+ar2[279]="\"Somewhere, something incredible is waiting to be known.\"  -Carl Sagan"
+ar2[280]="\"Laughter is the shortest distance between two people.\"  -Victor Borge"
+ar2[281]="\"Hold fast to dreams, for if dreams die, life is a broken bid that cannot fly.\"  -Langston Hughes"
+ar2[282]="\"We are what we think. All that we are arises with our thoughts. With our thoughts, we make the world.\"  -Buddha"
+ar2[283]="\"Those who stand for nothing fall for anything.\"  -Alexander Hamilton"
+ar2[284]="\"It is not length of life, but depth of life.\"  -Ralph Waldo Emerson"
+ar2[285]="\"Just when you think that a person is just a backdrop for the rest of the universe, watch them and see that they laugh, they cry, they tell jokes ... they're just friends waiting to be made.\"  -Jeffery Borenstein"
+ar2[286]="\"Everything has been figured out, except how to live.\"  -Jean-Paul Sartre"
+ar2[287]="\"Listen or thy tongue will keep thee deaf.\"  -American Indian Proverb"
+ar2[288]="\"The basis of optimism is sheer terror.\"  -Oscar Wilde"
+ar2[289]="\"If you can imagine it, You can achieve it. If you can dream it, You can become it.\"  -William Arthur Ward"
+ar2[290]="\"It is better to debate a question without settling it than to settle a question without debating it.\"  -Jeseph Joubert"
+ar2[291]="\"Spoon feeding in the long run teaches us nothing but the shape of the spoon.\"  -E. M. Forster"
+ar2[292]="\"The most beautiful thing we can experience is the mysterious.\"  -Albert Einstein"
+ar2[293]="\"One should not stand at the foot of a sick person's bed, because that place is reserved for the guardian angel.\"  -Jewish Folk Saying"
+ar2[294]="\"Some people weave burlap into the fabric of our lives, and some weave gold thread. Both contribute to make the whole picture beautiful and unique.\"  -Unknown"
+ar2[295]="\"Happiness is a choice that requires effort at times.\"  -Unknown"
+ar2[296]="\"Everyone is kneaded out of the same dough but not baked in the same oven.\"  -Yiddish Proverb"
+ar2[297]="\"Consistency is the last resort of the unimaginative.\"  -Oscar Wilde"
+ar2[298]="\"To confine our attention to terrestrial matters would be to limit the human spirit.\"  -Stephen Hawking"
+ar2[299]="\"He is able who thinks he is able.\"  -Buddha"
+ar2[300]="\"If you want rainbows, you have to put up with the rain.\"  -Dolly Parton"
+ar2[301]="\"When I find myself fading, I close my eyes and realize my friends are my energy.\"  -Unknown"
+ar2[302]="\"It was when I found out I could make mistakes that I knew I was on to something.\"  -Ornette Coleman"
+ar2[303]="\"The world is so fast that there are days when the person who says it can't be done is interrupted by the person who is doing it.\"  -Unknown"
+ar2[304]="\"The future belongs to those who believe in the beauty of their dreams.\"  -Eleanor Roosevelt"
+ar2[305]="\"Diamonds are nothing more than chunks of coal that stuck to their jobs.\"  -Malcolm Forbes"
+ar2[306]="\"If being an egomaniac means I believe in what I do and in my art or music, then in that respect you can call me that ... I believe in what I do, and I'll say it.\"  -John Lennon"
+ar2[307]="\"Destiny is not a matter of chance, it is a matter of choice; it is not a thing to be waited for, it is a thing to be achieved.\"  -William Jennings Bryan"
+ar2[308]="\"The mind is not a vessel to be filled but a fire to be kindled.\"  -Plutarch"
+ar2[309]="\"You will find as you look back upon your life that the moments when you have truly lived are the moments when you have done things in the spirit of love.\"  -Henry Drummond"
+ar2[310]="\"It is not for him to pride himself who loveth his own country, but rather for him who loveth the whole world. The earth is but one country and mankind its citizens.\"  -Baha'u'llah"
+ar2[311]="When companies ship Styrofoam what do they pack it in? "
+ar2[312]="Why is a \"carrot\" more \"orange\" than an 'orange'? "
+ar2[313]="Why do we label underwear as a pair? "
+ar2[314]="What would a chair look like if your knees bent the other way? "
+ar2[315]="Why do firehouses have Dalmatians? "
+ar2[316]="Why is it called a TV \"set\", when you only get one? "
+ar2[317]="Why, in a country with freedom of speech, are there phone bills? "
+ar2[318]="Does the little mermaid wear an \"algaebra\"?"
+ar2[319]="Why do scars never go away? "
+ar2[320]="Why don't sheep shrink when it rains? "
+ar2[321]="Why do old women dye their hair blue? "
+ar2[322]="Is a laughingstock a farm animal with a sense of humor? "
+ar2[323]="Why do they put Braille dots on the keypad of the drive-up ATM? "
+ar2[324]="Should you trust a stockbroker who's married to a travel agent? "
+ar2[325]="Why do they report power outages on TV? "
+ar2[326]="Why do tugboats push their barges? "
+ar2[327]="Sooner or later doesn't \"EVERYONE\" stop smoking? "
+ar2[328]="Why is a \"keyboard\" called a \"keyboard\" if it just has little buttons? "
+ar2[329]="How can someone walk uphill both ways, through 32 feet of snow?"
+ar2[330]="What is the purpose of that little ball on top of the flagpole? "
+ar2[331]="If 75% of all accidents occur within \"5\" miles of home, why not move \"10\" miles away? "
+ar2[332]="Why does your \"nose\" \"run\" and your \"feet\" \"smell\"? "
+ar2[333]="Will you die if you get scared half to death twice? "
+ar2[334]="What is the funny beep on the radio just before the network news? "
+ar2[335]="If a vampire can't see himself in a mirror, why is his hair always so neat?"
+ar2[336]="If a cow laughed, would milk come out its nose? "
+ar2[337]="If \"7-11\" is open 24 hours a day, 365 days a year, why are there locks on the doors? "
+ar2[338]="Why do men's bicycles have crossbars? "
+ar2[339]="Why is the word \"abbreviate\" so long? "
+ar2[340]="Do married people live longer than single people do, or does it just seem longer?"
+ar2[341]="Why do they lock gas station bathrooms? Are they afraid someone is going to \"clean\" them? "
+ar2[342]="Is it true that cannibals don't eat clowns because they taste funny? "
+ar2[343]="If the funeral procession is at night, do folks drive with their headlights off? "
+ar2[344]="Can you be a \"closet\" claustrophobic?"
+ar2[345]="If a parsley farmer is sued, can they \"garnish\" his wages? "
+ar2[346]="If you are in a vehicle going the speed of light, what happens if you turn on your headlights? "
+ar2[347]="Isn't Disneyland a \"people trap\" operated by a mouse? "
+ar2[348]="If you keep trying to prove \"Murphy's Law\", will something go wrong? "
+ar2[349]="Do you need a silencer if you are going to shoot a mime?"
+ar2[350]="Are people born stupid, or do they have to work at it?"
+ar2[351]="How did a \"fool\" and his \"money\" get \"together\"?"
+ar2[352]="If the cops arrest a mime, do they tell him he has the right to remain silent? "
+ar2[353]="If you \"try to fail\" and \"succeed\", which have you done?"
+ar2[354]="How can someone draw a blank?"
+ar2[355]="Do toilet seats really protect us from anything?"
+ar2[356]="Why do they call it \"quicksand\" when it sucks you down \"slowly\"?"
+ar2[357]="If quitters never win, and winners never quit, then who is the fool who said, \"Quit while you're ahead\"?"
+ar2[358]="How do you know when it is time to tune your bagpipes?"
+ar2[359]="If someone with multiple personalities robs a bank, who is charged with the crime?"
+ar2[360]="\"Corn oil\" is made from \"corn\", \"Olive oil\" is made from \"olives\", so what does \"baby oil\" come from?"
+ar2[361]="How can there be self-help groups?"
+ar2[362]="If the land is free, why is someone always trying to sell me something?"
+ar2[363]="Why are movie theatres always so cold? "
+ar2[364]="If \"firefighters\" fight \"fires\" and \"crime fighters\" fight \"crime\", what do \"freedom fighters\" fight? "
+ar2[365]="Why do you often see a shoe lying on the side of the street? "
+ar2[366]="Why do we pay tolls on the freeway?"
+ar2[367]="Why do banks charge you a \"non-sufficient funds\" fee on money they already know you don't have? "
+ar2[368]="Does the \"reverse side\" also have a \"'reverse side\"'?"
+ar2[369]="Do you think the \"Assassination Museum\" was created after JFK's assassination?"
+ar2[370]="Where do forest rangers go to get away from it all? "
+ar2[371]="Why is a \"'black' light\" not black? "
+ar2[372]="Why is it when a \"door\" is open it's \"ajar\" but when a \"jar\" is open it isn't \"adoor\"? "
+ar2[373]="Why do they call a \"pear\" a 'pear' if there is only one? "
+ar2[374]="Why is it called a Caesar's salad? Did he invent it? "
+ar2[375]="If it is tourist season, why can't we shoot them?"
+ar2[376]="Since light travels faster than sound, isn't that why some people appear bright until you hear them speak? "
+ar2[377]="Do blind Eskimos have \"Seeing-Eye\" sled dogs?"
+ar2[378]="If someone invented instant water, what would they mix it with? "
+ar2[379]="Why do old men wear their pants higher than young men do? "
+ar2[380]="If your born again do you have two belly buttons? "
+ar2[381]="Why do they say \"New and Improved\"? It can't be \"New\" if it was \"Improved\" can it?"
+ar2[382]="Why did kamikaze pilots wear helmets? "
+ar2[383]="If you choke a Smurf, what color would it turn? "
+ar2[384]="How does the guy who runs the snowplow get to work in the morning?"
+ar2[385]="Why do we \"drive\" on \"parkways\" and \"park\" on \"driveways\"? "
+ar2[386]="If you got into a taxi, and the driver started driving backward, would the taxi driver end up owing you money? "
+ar2[387]="How do they get deer to cross at the yellow sign?"
+ar2[388]="Why do we wait until a pig is \"dead\" to \"cure\" it? "
+ar2[389]="How much money, in pennies, is lying on the streets of the world?"
+ar2[390]="Why do women wear such uncomfortable shoes? "
+ar2[391]="Why does the Indiana ''Driver's License'' include in its list of possible restrictions: \"B\" for \"Blind\"?"
+ar2[392]="If a turtle doesn't have a shell, is he homeless, or is he naked? "
+ar2[393]="Why is it called a \"football\" when you really don't use your \"feet\" at all? "
+ar2[394]="Why does the \"psychic\" hotline ask for your credit card number? Shouldn't they already know it? "
+ar2[395]="Why do \"'fat' chance\" and \"'slim' chance\" mean the same thing? "
+ar2[396]="Isn't the best way to \"save\" face to keep the lower part shut? "
+ar2[397]="Do \"vegetarians\" eat \"animal\" crackers?"
+ar2[398]="How does Elmo hear? Elmo has no ears?"
+ar2[399]="Why are there \"Interstate Highways\" in Hawaii? "
+ar2[400]="Did Washington just flash a quarter for his \"ID\"?"
+ar2[401]="Why is it that when you tell a person that there are 400 billion stars in the sky, he'll believe you, but when you tell him that a bench is wet, he has to touch it to believe you? "
+ar2[402]="If a tree falls in the forest, and no one is around to see it, do the other trees make fun of it? "
+ar2[403]="Is the grass really greener on the other side? "
+ar2[404]="Why is there only ONE \"Monopolies Commission\"? "
+ar2[405]="Why is an \"orange\" an 'orange', but an \"apple\" not a 'red'? "
+ar2[406]="If there is no \"God\", who pops up the next Kleenex in the box? "
+ar2[407]="Is the glass \"half full\" or \"half empty\"?"
+ar2[408]="If you set to work with a knife that will cut through anything, and a Tupperware that's guaranteed not to break, what happens?"
+ar2[409]="How do I set my \"laser\" printer on \"stun gun\"?"
+ar2[410]="Why do people look up when they think?"
+ar2[411]="Why do we tie shoes to the back of newlywed's cars? "
+ar2[412]="Why don't we get dizzy from the world spinning so fast? "
+ar2[413]="Is it possible to be totally partial? "
+ar2[414]="If blind people wear sunglasses, why don't deaf people wear earmuffs? "
+ar2[415]="Does a fish get cramps after eating?"
+ar2[416]="What are preparations \"A-G\"? "
+ar2[417]="Why does it start to sound really strange when you say a color a lot? "
+ar2[418]="Do \"infants\" have as much \"fun\" in the \"infancy\" as \"adults\" do in their \"adultery\"?"
+ar2[419]="What happened to the first 6 \"ups\"?"
+ar2[420]="Why do doughnuts have holes? "
+ar2[421]="Do cemetery workers prefer the \"graveyard\" shift?"
+ar2[422]="If you throw your pet cat out the window of your car, does it become \"cat litter\"? "
+ar2[423]="Why are cigarettes sold at gas stations, if smoking is prohibited there? "
+ar2[424]="Why are cows milked from the right side? "
+ar2[425]="Why is it called a \"building\" when it's already \"built\"? "
+ar2[426]="Why isn't \"phonic\" spelled the way it sounds? "
+ar2[427]="Can \"fat\" people go \"skinny-dipping\"?"
+ar2[428]="Why do we \"play\" in \"recitals\", and \"recite\" in \"plays\"? "
+ar2[429]="How does the \"Cheshire Cat\" only show his smile?"
+ar2[430]="Why did \"God\" give men nipples? "
+ar2[431]="Isn't \"Big Kid\" an oxymoron?"
+ar2[432]="If trailer parks didn't exist, would tornadoes exist? "
+ar2[433]="Why do they call \"straightjackets\" \"straight jackets\" when they are never \"straight\"?"
+ar2[434]="Why do we have to dry raincoats? "
+ar2[435]="Why isn't \"palindrome\" spelled the same way backwards? "
+ar2[436]="If a man evolved from monkeys and apes, why do we still have monkeys and apes? "
+ar2[437]="Why do you have a \"'hot water' heater\" when you don't need to \"'heat' 'hot water'\"? "
+ar2[438]="Just before someone gets nervous, do they experience cocoons in their stomachs?"
+ar2[439]="Does chewing gum \"lose\" its flavor on the bed post \"overnight\"?"
+ar2[440]="Can your face actually \"freeze\" while making \"ugly\" faces?"
+ar2[441]="Why do steam irons have a permanent press setting? "
+ar2[442]="Why do we itch? "
+ar2[443]="Why do phone companies give you a number to call if your phone doesn't work?"
+ar2[444]="Would a \"fly\" without wings be called a \"walk\"? "
+ar2[445]="When I erase a word with a pencil, where does it go? "
+ar2[446]="How come you press harder on a remote when you know the battery is dead?"
+ar2[447]="Why isn't there \"mouse flavored\" cat food? "
+ar2[448]="Why are they called apartments, when they are stuck together? "
+ar2[449]="Why are most homes white? "
+ar2[450]="If the universe is everything, and scientists say that the universe is expanding, what is it expanding into? "
+ar2[451]="Why don't we get \"goosebumps\" on our face? "
+ar2[452]="Why do \"brown\" eyes see better in the sun than \"blue\" eyes? "
+ar2[453]="Why does an alarm clock \"go off\" when it \"BEGINS\" ringing? "
+ar2[454]="Why goes glass eventually get thicker towards the bottom?"
+ar2[455]="Why is \"Jack\" a nickname for \"John\"? "
+ar2[456]="Why can't we make newspapers that don't smudge? "
+ar2[457]="Who really took the \"bite\" out of the \"Apple\" logo? "
+ar2[458]="If the \"#2 pencil\" is so popular, why is it still \"#2\"? "
+ar2[459]="How is it possible to have a \"'civil' 'war'\"?"
+ar2[460]="Why do roman paramedics refer to \"IV's\" as \"4's\"?"
+ar2[461]="Will wearing short-sleeve shirts show your support for the right to bare arms? "
+ar2[462]="Why do some ranchers put old boots on fence posts? "
+ar2[463]="Where do they get that \"awful\" music for ice-skating? "
+ar2[464]="If a person \"kills\" their clone, is it \"murder\" or \"suicide\"?"
+ar2[465]="Why are they called \"stands\", when they are made for sitting? "
+ar2[466]="If a book about failures doesn't sell, is it a success? "
+ar2[467]="Whose cruel idea was it for the word \"lisp\" to have an \"s\" in it? "
+ar2[468]="If vegetarians eat vegetables, what do humanitarians eat? "
+ar2[469]="How do you tell when you are out of invisible ink?"
+ar2[470]="How does one actually \"zip their lip\"?"
+ar2[471]="When an elevator is \"overloaded\" with passengers, who is criminally responsible? "
+ar2[472]="If the entire world is a stage, where is the audience sitting? "
+ar2[473]="When sign makers go on strike, is there \"anything\" written on their \"signs\"? "
+ar2[474]="Why are toilet flush handles on the left side? "
+ar2[475]="Why do other people hear our voices different than we do? "
+ar2[476]="How does \"Kraft\" get the \"5 ounces\" into \"every\" slice of \"American Singles\"?"
+ar2[477]="How come \"Superman\" can stop bullets with his chest, but he always ducks when someone throws a gun at him?"
+ar2[478]="Do hungry crows have ravenous appetites?"
+ar2[479]="Why is it that when you are driving and looking for an address, you turn the radio down? "
+ar2[480]="Why are there flotation devices under plane seats instead of parachutes? "
+ar2[481]="If you're cross-eyed and have dyslexia, can you read all right? "
+ar2[482]="If someone with multiple personalities threatens to kill himself, is it considered a hostage situation or a murder? "
+ar2[483]="Why is it that when you see someone in a cast or a brace, you say \"ouch\"?"
+ar2[484]="If it is zero degrees outside today, and it is supposed to be twice as cold tomorrow, how cold is it going to be? "
+ar2[485]="What do you plant to grow a \"'seedless' watermelon\"?"
+ar2[486]="Was the only reason \"God\" gave us a shin to find things in the dark? "
+ar2[487]="Why are there 5 syllables in the word \"monosyllabic\"? "
+ar2[488]="Where are the germs that cause \"good breath\"? "
+ar2[489]="Why does \"unscented\" hairspray smell? "
+ar2[490]="What is \"Mother Goose's\" real first name? "
+ar2[491]="If one synchronized swimmer drowns, do the rest have to drown too? "
+ar2[492]="Why do the minute hands on school clocks always click \"backwards\" before advancing? "
+ar2[493]="If a stealth bomber crashes in a forest, will it make a sound? "
+ar2[494]="Why do your feet swell on airplanes? "
+ar2[495]="If \"pro\" is the opposite of \"con\", is \"progress\" the opposite of \"congress\"? "
+ar2[496]="Shouldn't there be a shorter word for \"monosyllabic\"? "
+ar2[497]="If white wine goes with fish, do white grapes go with sushi? "
+ar2[498]="Before they invented drawing boards, what did they go back to?"
+ar2[499]="Why do scientists call it \"research\", when they are looking for something new? "
+ar2[500]="If nothing \"ever\" \"sticks\" to \"Teflon\", how do they \"get\" \"Teflon\" to \"stick\" to the pan? "
+ar2[501]="Are there \"'Seeing-Eye' Humans\" for blind dogs?"
+ar2[502]="How come you never hear about \"gruntled\" employees?"
+ar2[503]="Why don't more \"psychics\" win the lottery? "
+ar2[504]="How many \"licks\" does it \"really\" take to get to the center of a \"Tootsie Pop\"? "
+ar2[505]="How do they \"unclog\" mail chutes in skyscrapers?"
+ar2[506]="If I break the \"Laws of Physics\", do I go to jail?"
+ar2[507]="What is the purpose of the red string on \"Band-Aid\" brand adhesive packages? "
+ar2[508]="What causes the holes in \"Swiss\" cheese? "
+ar2[509]="Why is it, that when you transport something by \"car\", it is called a \"shipment\", but when you transport something by \"ship\" it is called \"cargo\"? "
+ar2[510]="Do they have reserved parking for non-handicapped people at the \"Special Olympics\"?"
+ar2[511]="Why is the alphabet in that order? Is it because of that song? "
+ar2[512]="Why is there an expiration date on \"SOUR\" cream? "
+ar2[513]="What was the best thing before sliced bread? "
+ar2[514]="Why is it when to planes almost hit each other it is called a near miss? Shouldn't it be called a near hit? "
+ar2[515]="Why can't you find fresh sardines in a fish market? "
+ar2[516]="Which fruits are in \"Juicy Fruit\"? "
+ar2[517]="If you can't drink and drive why do you need a driver's license to buy liquor, and why do bars have parking lots? "
+ar2[518]="If you don't repair your brakes right away should you make your horn louder? "
+ar2[519]="How many \"turtles\" does it take to make one can of \"Turtle Wax\"? "
+ar2[520]="Why are jeans so hard to fit into? "
+ar2[521]="What do little birdies see if they get knocked unconscious? "
+ar2[522]="Why aren't there seat belts in buses and taxicabs? "
+ar2[523]="Isn't it a bit unnerving, that doctors call what they do \"practice\"?"
+ar2[524]="Why do they call it the \"Department of Interior\" when they are in charge of everything outdoors? "
+ar2[525]="Why is yawning \"contagious\"? "
+ar2[526]="Why do we sing \"Take Me Out To the Ball Game\" if we are already there? "
+ar2[527]="Why do we buy a product that takes \"2000 Flushes\" to get rid of? "
+ar2[528]="If taught, do gorillas really \"understand\" sign language? "
+ar2[529]="Why is toilet paper scented? "
+ar2[530]="Why doesn't \"Tarzan\" have a beard? "
+ar2[531]="Why don't penguins in Antarctica ever get frostbite? "
+ar2[532]="Do boxer shorts box?"
+ar2[533]="How much deeper would the ocean be if sponges didn't grow in it? "
+ar2[534]="Have you ever imagined a world with no hypothetical situations?"
+ar2[535]="Why does soda taste better in a small bottle, than in a large bottle or in a can? "
+ar2[536]="If a mute swears, does his mother wash his hands with soap? "
+ar2[537]="What do you do, when you see an endangered animal that is eating an endangered plant? "
+ar2[538]="If you have an \"open mind\", is there a chance your brain might \"fall out\"? "
+ar2[539]="Is there \"another word\" for \"synonym\"? "
+ar2[540]="Why does \"X\" stand for \"kiss\" and \"O\" stand for \"hugs\"? "
+ar2[541]="Where does the lost sock in the washer and dryer go? "
+ar2[542]="Does \"fuzzy logic\" tickle?"
+ar2[543]="Why do bananas grow upward and all other fruits grow downward? "
+ar2[544]="Where do swear words come from? "
+ar2[545]="Why doesn't \"onomatopoeia\" sound like what it is? "
+ar2[546]="Why do people who know the least know it the loudest? "
+ar2[547]="Why do \"psychics\" have to ask for your name? "
+ar2[548]="If the \"speed of light\" is 186,000 miles per second, then what is the \"speed of dark\"? "
+ar2[549]="Why doesn't glue stick to the inside of the bottle? "
+ar2[550]="How do they get the cream in the \"Twinkie\"?"
+ar2[551]="Why do \"Corn Flakes\" and \"Sugar Frosted Flakes\" have the same number of calories per serving? "
+ar2[552]="Why does \"slow down\" and \"slow up\" mean the same thing? "
+ar2[553]="What does the \"Q\" in \"Q-tip\" stand for?"
+ar2[554]="Why are elections held on Tuesdays? "
+ar2[555]="Instead of talking to your plants, if you yelled at them would they still grow? Only to be troubled and insecure? "
+ar2[556]="What happens when \"none of your 'bees wax'\"? "
+ar2[557]="Why do they sterilize the needles for lethal injections? "
+ar2[558]="Do little angels have car seats in their chariots in heaven?"
+ar2[559]="What's \"another word\" for \"thesaurus\"? "
+ar2[560]="Why are school buses painted yellow? "
+ar2[561]="What does Geronimo yell when he jumps out of a plane? "
+ar2[562] = "Time is of the \"essence\"! Comb your hair.";
+ar2[563] = "Sanity is a \"golden apple\" with no shoelaces.";
+ar2[564] = "Repent! The end is coming, \"$9.95\" at \"Amazon\".";
+ar2[565] = "Honesty blurts where deception sneezes.";
+ar2[566] = "Pastry satisfies where art is unavailable.";
+ar2[567] = "Delete not, lest you, too, be \"deleted\".";
+ar2[568] = "O! \"Youth!\" What a \"pain in the backside.\"";
+ar2[569] = "\"Wishes\" are like \"goldfish\" with \"propellers\".";
+ar2[570] = "Love the river's \"beauty\", but \"live\" on a hill.";
+ar2[571] = "\"Invention\" is the \"mother\" of \"too many\" \"useless toys\".";
+
+
+quoteShowing=-1;
+
+
+
+function nextQuote()
+
+{
+
+  // restart at 0 if done
+
+  if (quoteShowing >= numQuotes) quoteShowing=-1;
+
+  quoteShowing++;
+
+
+
+  // assign the value in the textbox to the new quote
+
+  document.quoteForm.quoteHere.value = ar2[quoteShowing];
+
+}
+
+
+
+function prevQuote()
+
+{
+
+  // restart at end if on 0
+
+  if (quoteShowing <= 0) quoteShowing=numQuotes+1;
+
+  quoteShowing--;
+
+
+
+  document.quoteForm.quoteHere.value = ar2[quoteShowing];
+
+}
+
+
+
+function randQuote()
+
+{ 
+
+  // Make sure you don't show the same quote 2x in a row
+
+  prevQuoteShowing = quoteShowing;
+
+  while(quoteShowing == prevQuoteShowing)
+
+    quoteShowing = Math.ceil(Math.random() * numQuotes);
+
+
+
+  document.quoteForm.quoteHere.value = ar2[quoteShowing];
+
+}
+
+
+
+
+
+//-->
+</script>
+<style type="text/css">
+<!--
+.robotext {font-weight: bold; font-size: 9pt; color: #999999; font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+.robolink:link {font-weight: bold; font-size: 9pt; color: #999999; font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+.robolink:hover {font-weight: bold; font-size: 9pt; color: #9796516; font-family: Arial, Helvetica, sans-serif; text-decoration: underline}
+.robolink:visited {font-weight: bold; font-size: 9pt; color: #9796516; font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+/*-->
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+function validate(){
+var allok = true;
+  if(isNaN(htmlphpformgenerator1.Drink_Percentage__2.value)){
+    alert('Invalid input for Drink Percentage, this must be a number')
+    return false;
+  }
+  if(isNaN(htmlphpformgenerator1.Milk_Percentage__4.value)){
+    alert('Invalid input for Milk Percentage, this must be a number')
+    return false;
+  }
+  if(isNaN(htmlphpformgenerator1.Sweetener_Percentage__6.value)){
+    alert('Invalid input for Sweetener Percentage, this must be a number')
+    return false;
+  }
+  if(isNaN(htmlphpformgenerator1.Syrup_Percentage__8.value)){
+    alert('Invalid input for Syrup Percentage, this must be a number')
+    return false;
+  }
+  if(isNaN(htmlphpformgenerator1.Spice_Percentage__10.value)){
+    alert('Invalid input for Spice Percentage, this must be a number')
+    return false;
+  }
+  if(isNaN(htmlphpformgenerator1.Alcohol_Percentage__12.value)){
+    alert('Invalid input for Alcohol Percentage, this must be a number')
+    return false;
+  }
+    if(isNaN(htmlphpformgenerator1.Sugar_Percentage__14.value)){
+    alert('Invalid input for Sugar Percentage, this must be a number')
+    return false;
+  }
+document.htmlphpformgenerator1.Submit.disabled="disabled";
+return true;
+}
+//-->
+</script>
+<title>Error 418 - I'm an HTTP/HTCPCP/HTTPS/HTCPCPS "Error 418" Compliant 'Utah Teapot' "BREW" Request Generator And Drink Interface With Random Lucky Numbers And Random Fortune Cookies</title>
+</head>
+<body>
+<h1>Error 418 - I'm an HTCPCP compliant Utah Teapot</h1>
+<p>You are attempting to brew non-tea drinks with an HTCPCP compliant Utah Teapot.</p>
+<hr />
+<address>HTCPCP/1.0 (<a href="http://tools.ietf.org/html/rfc2324/">RFC 2324</a>) Apache web server running at <a href="http://localhost">localhost</a> on <a href="http://localhost:80">port 80</a></address>
+<br />
+<br />
+<br />
+<hr />
+<b>
+<h3>This form sends HTCPCP "BREW" Requests via E-Mail that can be ended by closing the E-Mail client/Browser Window or by clicking "Reformulate". "Brew Drinks" sends the form data. <br /> <i>Scroll down for fortunes and lucky numbers.</i></h3>
+<br />
+<form name="htmlphpformgenerator1" method="Post" action="mailto:flockwood@flinternet.com" onSubmit="return validate();">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td>Drink Type</td><td><input type="edit" name="Drink_Type__1" value="Decaf Peppermint Earl Grey" size="9223372036854775807"></td></tr>
+<tr><td>Drink Percentage</td><td><input type="edit" name="Drink_Percentage__2" value="50" size="16"></td></tr>
+<tr><td>Milk Type</td><td><input type="edit" name="Milk_Type__16" value="Creamer" size="9223372036854775807"></td></tr>
+<tr><td>Milk Percentage</td><td><input type="edit" name="Milk_Percentage__4" value="10" size="16"></td></tr>
+<tr><td>Sweetener Type</td><td><input type="edit" name="Sweetener_Type__5" value="Stevia" size="9223372036854775807"></td></tr>
+<tr><td>Sweetener Percentage</td><td><input type="edit" name="Sweetener_Percentage__6" value="5" size="16"></td></tr>
+<tr><td>Syrup Type</td><td><input type="edit" name="Syrup_Type__7" value="Raspberry Vanilla Cherry Almond" size="9223372036854775807"></td></tr>
+<tr><td>Syrup Percentage</td><td><input type="edit" name="Syrup_Percentage__8" value="10" size="16"></td></tr>
+<tr><td>Spice Type</td><td><input type="edit" name="Spice_Type__9" value="Trinity" size="9223372036854775807"></td></tr>
+<tr><td>Spice Percentage</td><td><input type="edit" name="Spice_Percentage__10" value="10" size="16"></td></tr>
+<tr><td>Alcohol Type</td><td><input type="edit" name="Alcohol_Type__11" value="Butterbeer" size="9223372036854775807"></td></tr>
+<tr><td>Alcohol Percentage</td><td><input type="edit" name="Alcohol_Percentage__12" value="10" size="16"></td></tr>
+<tr><td>Sugar Type</td><td><input type="edit" name="Sugar_Type__13" value="Cane Sugar" size="9223372036854775807"></td></tr>
+<tr><td>Sugar Percentage</td><td><input type="edit" name="Sugar_Percentage__14" value="5" size="16"></td></tr>
+<tr><td align="center"><input type="reset" name="Reset" value="Reformulate"></td><td align="center"><input type="submit" name="Submit" value="Brew Drinks"></td></tr>
+<tr><td colspan=2 class=robotext><a href="http://www.phpform.info" class="robolink">HTML/PHP Form Generator</a> from ROBO Design Solutions</td></tr></table></form></b>
+<hr />
+<h2>Side 1 Of Your Fortune Cookie For Today Says:</h2>
+<table width="260" height="70" border="1" cellpadding="8">
+<tr><td>
+<form name="quoteForm">
+
+  <textarea wrap="virtual" name="quoteHere" rows="4" cols="60">
+
+    Random Quotes Java Script 
+
+    by Brandon Checketts at Microbits
+
+  </textarea>
+  <br />
+  <input type=button value="Previous" onClick="prevQuote();">
+
+  <input type=button value="Next" onClick="nextQuote();">
+
+  <input type=button value="Random" onclick="randQuote();">
+
+</form>
+</td></tr>
+</table>
+<br />
+<h2>Side 2 Of Your Fortune Cookie For Today Also Says:</h2>
+<table width="260" height="70" border="1" cellpadding="8">
+<tr><td>
+<h4>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Where you place this is where the random object will be displayed.
+
+document.write(ar[rand(ar.length)])
+//-->
+</script>
+</h4>
+</td></tr>
+</table>
+<h3>Your Free Bonus CA SuperLotto Plus Random Quick Picks For Today Are:</h3>
+<table cellspacing="6"><tr>
+<td>
+<table width="200" height="70" border="1" cellpadding="8">
+<tr><td>
+<h3>
+<script language="JavaScript" type="text/javascript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+num= new Array(5);
+for (i=0; i<5; i++) {
+num[i]=Math.floor(47*Math.random()+1);
+if (num[1]==num[0]) {
+while (num[1]==num[0]) {
+num[1]=Math.floor(47*Math.random()+1);
+   }
+}
+if (num[2]==num[1] || num[2]==num[0]) {
+while (num[2]==num[1] || num[2]==num[0]) {
+num[2]=Math.floor(47*Math.random()+1);
+   }
+}
+if (num[3]==num[2] || num[3]==num[1] || num[3]==num[0]) {
+while (num[3]==num[2] || num[3]==num[1] || num[3]==num[0]) {
+num[3]=Math.floor(47*Math.random()+1);
+   }
+}
+document.write(num[i],", ");
+}
+// End -->
+</script>
+</h3>
+</td></tr>
+</table>
+<td>
+<table width="36" height="36" border="1" cellpadding="8">
+<tr><td>
+<h2>
+<script language="JavaScript" type="text/javascript">
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+num= new Array(1);
+for (i=0; i<1; i++) {
+num[i]=Math.floor(27*Math.random()+1);
+if (num[1]==num[0]) {
+while (num[1]==num[0]) {
+num[1]=Math.floor(27*Math.random()+1);
+   }
+}
+if (num[2]==num[1] || num[2]==num[0]) {
+while (num[2]==num[1] || num[2]==num[0]) {
+num[2]=Math.floor(27*Math.random()+1);
+   }
+}
+if (num[3]==num[2] || num[3]==num[1] || num[3]==num[0]) {
+while (num[3]==num[2] || num[3]==num[1] || num[3]==num[0]) {
+num[3]=Math.floor(27*Math.random()+1);
+   }
+}
+document.write(num[i], "");
+}
+// End -->
+</script>
+</h2>
+</td></tr>
+</table>
+</td><td><h4>Mega Number</h4></td></tr></table>
+<br />
+<h3>
+To Play California SuperLotto Plus:<br /> 
+Select 5 numbers from 1 to 47<br> & 1 Mega number from 1 to 27.
+<br />
+Odds of matching all 5 of 5 numbers & Mega number = 41,416,353 to 1</h3>
+<h3>Click <a href="javascript:location.reload();">here</a> for new fortunes & lotto numbers, or click the button to turn off the clock.</h3>
+<script type="text/javascript">
+<!-- Mouse Clock Button
+//Hide from older browsers 
+if (document.getElementById&&!document.layers){
+document.write('<input type="button" id="control" value="Clock Off" onClick="this.blur();onoff()">');
+}
+//-->
+</script>
+<br />
+
+<br />
+<h4>The Fortune Cookie and Lucky Numbers originally were on WisdomPortal.com until the site/page shut down. <br /> I, stgiga, added over 500 extra messages and some interactivity to the list from many JS Copy+Paste script sites, and created everything else on this page (including the page font <a href="http://stgiga.github.io/UnifontEX" target="_blank">UnifontEX</a>) minus the "HTML/PHP Form Generator" that already credits the creators. <br /></h4>
+<hr />
+<script language="JavaScript" type="text/javascript">
+<!-- Mouse Follow Clock from Rainbow Arch -->
+<!-- This script and many more from : -->
+<!-- http://rainbow.arch.scriptmania.com -->
+
+<!-- Mouse Follow Clock from www.rainbow.arch.scriptmania.com
+//Hide from older browsers 
+if (document.getElementById&&!document.layers){
+
+// *** Clock colours
+dCol='#009900';   //date colour.
+fCol='#9999ff';   //face colour.
+sCol='#991199';   //seconds colour.
+mCol='#333399';   //minutes colour.
+hCol='#ff0000';   //hours colour.
+
+// *** Controls
+del=0.6;  //Follow mouse speed.
+ref=40;   //Run speed (timeout).
+
+//  Alter nothing below!  Alignments will be lost!
+var ieType=(typeof window.innerWidth != 'number');
+var docComp=(document.compatMode);
+var docMod=(docComp && docComp.indexOf("CSS") != -1);
+var ieRef=(ieType && docMod)
+?document.documentElement:document.body;
+theDays=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+theMonths=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+date=new Date();
+day=date.getDate();
+year=date.getYear();
+if (year < 2000) year=year+1900; 
+tmpdate=" "+theDays[date.getDay()]+" "+day+" "+theMonths[date.getMonth()]+" "+year;
+D=tmpdate.split("");
+N='3 4 5 6 7 8 9 10 11 12 1 2';
+N=N.split(" ");
+F=N.length;
+H='...';
+H=H.split("");
+M='....';
+M=M.split("");
+S='.....';
+S=S.split("");
+siz=40;
+eqf=360/F;
+eqd=360/D.length;
+han=siz/5.5;
+ofy=-7;
+ofx=-3;
+ofst=70;
+tmr=null;
+vis=true;
+mouseY=0;
+mouseX=0;
+dy=new Array();
+dx=new Array();
+zy=new Array();
+zx=new Array();
+tmps=new Array();
+tmpm=new Array(); 
+tmph=new Array();
+tmpf=new Array(); 
+tmpd=new Array();
+var sum=parseInt(D.length+F+H.length+M.length+S.length)+1;
+for (i=0; i < sum; i++){
+dy[i]=0;
+dx[i]=0;
+zy[i]=0;
+zx[i]=0;
+}
+
+algn=new Array();
+for (i=0; i < D.length; i++){
+algn[i]=(parseInt(D[i]) || D[i]==0)?10:9;
+document.write('<div id="_date'+i+'" class="css2" style="font-size:'+algn[i]+'px;color:'+dCol+'">'+D[i]+'<\/div>');
+tmpd[i]=document.getElementById("_date"+i).style;
+}
+for (i=0; i < F; i++){
+document.write('<div id="_face'+i+'" class="css2" style="color:'+fCol+'">'+N[i]+'<\/div>');
+tmpf[i]=document.getElementById("_face"+i).style; 
+}
+for (i=0; i < H.length; i++){
+document.write('<div id="_hours'+i+'" class="css1" style="color:'+hCol+'">'+H[i]+'<\/div>');
+tmph[i]=document.getElementById("_hours"+i).style;
+}
+for (i=0; i < M.length; i++){
+document.write('<div id="_minutes'+i+'" class="css1" style="color:'+mCol+'">'+M[i]+'<\/div>');
+tmpm[i]=document.getElementById("_minutes"+i).style; 
+}
+for (i=0; i < S.length; i++){
+document.write('<div id="_seconds'+i+'" class="css1" style="color:'+sCol+'">'+S[i]+'<\/div>');
+tmps[i]=document.getElementById("_seconds"+i).style;         
+}
+
+function onoff(){
+if (vis){ 
+ vis=false;
+ document.getElementById("control").value="Clock On";
+ }
+else{ 
+ vis=true;
+ document.getElementById("control").value="Clock Off";
+ Delay();
+ }
+kill();
+}
+
+function kill(){
+if (vis) 
+ document.onmousemove=mouse;
+else 
+ document.onmousemove=null;
+} 
+
+function mouse(e){
+var msy = (!ieType)?window.pageYOffset:0;
+if (!e) e = window.event;    
+ if (typeof e.pageY == 'number'){
+  mouseY = e.pageY + ofst - msy;
+  mouseX = e.pageX + ofst;
+ }
+ else{
+  mouseY = e.clientY + ofst - msy;
+  mouseX = e.clientX + ofst;
+ }
+if (!vis) kill();
+}
+document.onmousemove=mouse;
+
+function winDims(){
+winH=(ieType)?ieRef.clientHeight:window.innerHeight; 
+winW=(ieType)?ieRef.clientWidth:window.innerWidth;
+}
+winDims();
+window.onresize=new Function("winDims()");
+
+function ClockAndAssign(){
+time = new Date();
+secs = time.getSeconds();
+sec = Math.PI * (secs-15) / 30;
+mins = time.getMinutes();
+min = Math.PI * (mins-15) / 30;
+hrs = time.getHours();
+hr = Math.PI * (hrs-3) / 6 + Math.PI * parseInt(time.getMinutes()) / 360;
+
+for (i=0; i < S.length; i++){
+ tmps[i].top=dy[D.length+F+H.length+M.length+i]+ofy+(i*han)*Math.sin(sec)+scrollY+"px";
+ tmps[i].left=dx[D.length+F+H.length+M.length+i]+ofx+(i*han)*Math.cos(sec)+"px";
+ }
+for (i=0; i < M.length; i++){
+ tmpm[i].top=dy[D.length+F+H.length+i]+ofy+(i*han)*Math.sin(min)+scrollY+"px";
+ tmpm[i].left=dx[D.length+F+H.length+i]+ofx+(i*han)*Math.cos(min)+"px";
+ }
+for (i=0; i < H.length; i++){
+ tmph[i].top=dy[D.length+F+i]+ofy+(i*han)*Math.sin(hr)+scrollY+"px";
+ tmph[i].left=dx[D.length+F+i]+ofx+(i*han)*Math.cos(hr)+"px";
+ }
+for (i=0; i < F; i++){
+ tmpf[i].top=dy[D.length+i]+siz*Math.sin(i*eqf*Math.PI/180)+scrollY+"px";
+ tmpf[i].left=dx[D.length+i]+siz*Math.cos(i*eqf*Math.PI/180)+"px";
+ }
+for (i=0; i < D.length; i++){
+ tmpd[i].top=dy[i]+siz*1.5*Math.sin(-sec+i*eqd*Math.PI/180)+scrollY+"px";
+ tmpd[i].left=dx[i]+siz*1.5*Math.cos(-sec+i*eqd*Math.PI/180)+"px";
+ }
+if (!vis)clearTimeout(tmr);
+}
+
+buffW=(ieType)?80:90;
+function Delay(){
+scrollY=(ieType)?ieRef.scrollTop:window.pageYOffset;
+if (!vis){
+ dy[0]=-100;
+ dx[0]=-100;
+}
+else{
+ zy[0]=Math.round(dy[0]+=((mouseY)-dy[0])*del);
+ zx[0]=Math.round(dx[0]+=((mouseX)-dx[0])*del);
+}
+for (i=1; i < sum; i++){
+ if (!vis){
+  dy[i]=-100;
+  dx[i]=-100;
+ }
+ else{
+  zy[i]=Math.round(dy[i]+=(zy[i-1]-dy[i])*del);
+  zx[i]=Math.round(dx[i]+=(zx[i-1]-dx[i])*del);
+ }
+if (dy[i-1] >= winH-80) dy[i-1]=winH-80;
+if (dx[i-1] >= winW-buffW) dx[i-1]=winW-buffW;
+}
+
+tmr=setTimeout('Delay()',ref);
+ClockAndAssign();
+}
+window.onload=Delay;
+window.onload=randQuote;
+randQuote();
+onoff();
+setTimeout(function(){onoff();}, 1);
+URLParser(url).getParams()
+}
+//-->
+</script>
+</body>
+</html>
